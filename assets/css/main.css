@@ -1231,6 +1231,13 @@ input, select, textarea {
 				margin: 0 auto;    /* Centers the image within the container */
 			}
 
+			#about .image.main img {
+				max-width: 50%;    /* This limits the size to 50% of its container */
+				height: auto;      /* Keeps the aspect ratio of the image */
+				display: block;
+				margin: 0 auto;    /* Centers the image within the container */
+			}
+
 		}
 
 		.responsive-iframe {
