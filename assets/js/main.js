@@ -318,11 +318,16 @@
 
 				switch (event.keyCode) {
 
-					case 27:
+					case 27: // Escape key
 
 						// Article visible? Hide.
-							if ($body.hasClass('is-article-visible'))
+						if ($body.hasClass('is-article-visible')) {
+							if (location.hash == '#project-content') {
+								location.hash = '#projects';
+							} else {
 								$main._hide(true);
+							}
+						}
 
 						break;
 

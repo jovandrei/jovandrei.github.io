@@ -1,0 +1,72 @@
+
++------------------------------------------------------+
+|                 SQL/NoSQL Interview                  |
+|------------------------------------------------------|
+| +--------------------------------------------------+ |
+| |                     SQL Basics                    | |
+| +--------------------------------------------------+ |
+| | - Relational Databases                            | |
+| | - Tables, Rows, Columns                           | |
+| | - SQL Syntax                                      | |
+| | - DDL (Data Definition Language)                  | |
+| | - DML (Data Manipulation Language)                | |
+| | - DCL (Data Control Language)                     | |
+| | - TCL (Transaction Control Language)              | |
+| | - Indexes                                         | |
+| | - Constraints                                     | |
+| | - Joins                                           | |
+| | - Normalization                                   | |
+| +--------------------------------------------------+ |
+|                                                      |
+| +--------------------------------------------------+ |
+| |                  Advanced SQL                     | |
+| +--------------------------------------------------+ |
+| | - Stored Procedures                               | |
+| | - Triggers                                        | |
+| | - Views                                           | |
+| | - Window Functions                                | |
+| | - Common Table Expressions                        | |
+| | - Pivot and Unpivot                               | |
+| | - Query Optimization                              | |
+| +--------------------------------------------------+ |
+|                                                      |
+| +--------------------------------------------------+ |
+| |                     NoSQL Basics                  | |
+| +--------------------------------------------------+ |
+| | - NoSQL Overview                                  | |
+| | - Document-Oriented Databases                     | |
+| | - Key-Value Stores                                | |
+| | - Column-Oriented Databases                       | |
+| | - Graph Databases                                 | |
+| +--------------------------------------------------+ |
+|                                                      |
+| +--------------------------------------------------+ |
+| |                  Advanced NoSQL                   | |
+| +--------------------------------------------------+ |
+| | - Data Modeling                                   | |
+| | - Sharding                                        | |
+| | - Replication                                     | |
+| | - Consistency                                     | |
+| | - CAP Theorem                                     | |
+| | - MapReduce                                       | |
+| +--------------------------------------------------+ |
+|                                                      |
+| +--------------------------------------------------+ |
+| |               SQL vs NoSQL                        | |
+| +--------------------------------------------------+ |
+| | - Structured vs Unstructured Data                 | |
+| | - ACID vs BASE                                    | |
+| | - Relational vs Non-Relational                    | |
+| | - Schema vs Schema-Less                           | |
+| | - Scalability                                     | |
+| | - Use Cases                                       | |
+| +--------------------------------------------------+ |
+|                                                      |
+| +--------------------------------------------------+ |
+| |                Miscellaneous Topics               | |
+| +--------------------------------------------------+ |
+| | - Database Security                               | |
+| | - Database Backup and Restore                     | |
+| | - Database Transactions                           | |
+| +--------------------------------------------------+ |
++------------------------------------------------------+

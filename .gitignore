@@ -1,2 +1,4 @@
 # Ignore all files in images
 images/*
+code/python_scripts/nutrition/OpenAI_api.ipynb
+code/python_scripts/aws_exercises/AWS_example.ipynb

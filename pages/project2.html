@@ -1,0 +1,75 @@
+<html>
+	<body>
+		<p></p>
+		<header>
+			<h2><a href="#">Proximity-Based Musical Instrument Using Arduino and Aluminum Foil</a></h2>
+		</header>
+
+		<div id="proximityInstrument">
+		<div class="responsive-iframe">
+			<iframe src="https://www.youtube.com/embed/293csMxQprk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+
+		<p>In this project, I created a unique musical instrument that responds to the proximity of a person. Using simple materials and an Arduino, this device leverages the principles of capacitive sensing to detect the presence and distance of a person, translating this into musical notes.</p>
+		<h4>Materials needed:</h4>
+		<ul>
+			<li>Arduino Uno</li>
+			<li>Aluminum foil</li>
+			<li>Shielded cables</li>
+			<li>Resistors (10K and 100K)</li>
+			<li>Speaker or buzzer</li>
+		</ul>
+		<h4>Setup:</h4>
+		<p>The aluminum foil is configured as a capacitor on a cardboard base, connected via shielded cables to minimize interference. The Arduino is connected to a speaker through which the musical notes are played. Several digital and analog pins on the Arduino are utilized to measure changes in capacitance and control the musical output.</p>
+		<h4>Code Execution:</h4>
+		<p>The Arduino program continuously monitors the capacitance detected by the aluminum foil. Changes in proximity affect the capacitance, which is read through digital pins on the Arduino. Depending on the readings from these pins, different musical notes are played, with closer proximity resulting in lower notes and farther distance producing higher notes.</p>
+		<h4>Features:</h4>
+		<p>Dynamic musical scale adjustment: The instrument can toggle between normal and sharp scales based on the proximity and movement detected. Responsive musical tones: The device changes tones in real-time, providing an interactive musical experience based on the user's position relative to the sensor.</p>
+		<h4>Code Snippets:</h4>
+	<pre><code>// Declare variables to hold the capacitive readings
+long pin8, pin9, pin10;
+
+int note; // Variable to hold the musical note value
+int scale = 1; // Variable to adjust the musical scale dynamically
+int sharp = 1; // Variable to adjust the musical tone dynamically
+int fadedCounter = -1; // Counter for cycling through faded notes array
+
+void loop() {  
+// Array containing frequencies of faded notes (lower intensity)
+double fadedNotes[] = {196.00,196.00,196.00,246.94,329.62,329.62,329.62,293.66,246.94,246.94,246.94,246.94,174.61,174.61,174.61,164.81};
+
+// Array containing frequencies for normal notes
+long notes[7] = {130.81, 146.83, 164.81, 174.61, 196.00, 220.00, 246.94}; 
+// Array containing frequencies for sharp notes
+long sharpNotes[7] = {138.59, 155.56, 174.61, 185.00, 207.65, 233.08, 261.63};
+
+// Read the capacitive values from the pins
+pin8 = time(8, B00000001);
+pin9 = time(9, B00000010);
+pin10 = time(10, B00000100);
+
+// Determine which note to play based on the proximity measured on pin 9
+if (sharp == 1) {
+// If in sharp mode, select notes based on sharpNotes array
+determineNoteSharp(pin9, notes);
+} else {
+// If not in sharp mode, cycle through faded notes
+determineNoteFaded(pin9, fadedNotes);
+}
+
+// Check for control changes from pin8 or pin10 to toggle scale or sharp mode
+checkControlChanges(pin8, pin10);
+}</code></pre>
+			<h4>Conclusion:</h4>
+			<p>This project not only demonstrates the application of physical computing and sensor integration but also provides a creative intersection of technology and art. </p>
+
+			<h4>Demo video:</h4>
+			<a href="https://www.youtube.com/embed/fTuSIq87tlM">Demo video</a>
+
+			<p></p>
+			<a href="https://github.com/jovandrei/jovandrei.github.io/blob/main/code/capacitor/capacitor.ino" class="button">View Code on GitHub</a>
+			<p></p>
+
+		</div>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+	<body>
+        <p></p>
+        <header>
+            <h2><a href="#">Random Snack Selector</a></h2>
+        </header>
+
+        <div class="responsive-iframe">
+            <iframe src="https://www.youtube.com/embed/aqEARNMnMwQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <p></p>
+        <header>
+            <h3>Dynamic Speed Controller</h3>
+        </header>
+        <p>This project features a dynamic speed controller implemented on an Arduino platform. It controls the direction and speed of a motor based on user inputs from a switch and a potentiometer.</p>
+        
+        <h4>Technical Details:</h4>
+        <ul>
+            <li><strong>Microcontroller:</strong> Arduino</li>
+            <li><strong>Input Devices:</strong> Switches and potentiometer for speed adjustment</li>
+            <li><strong>Output Devices:</strong> H-Bridge motor driver for bidirectional control</li>
+        </ul>
+
+        <h4>Code Explanation:</h4>
+    <pre><code>// Define pin connections
+int switchPinRev = 7;     // Input from the switch for reverse direction
+int switchPinFwd = 2;     // Input from the switch for forward direction
+int fwdPin = 5;           // Output to the H-Bridge for forward motion
+int revPin = 6;           // Output to the H-Bridge for reverse motion
+int potentiometerIn;      // Variable to hold the potentiometer input
+
+// Setup configuration, runs once on startup
+void setup() {
+pinMode(switchPinRev, INPUT_PULLUP);
+pinMode(switchPinFwd, INPUT_PULLUP);
+pinMode(fwdPin, OUTPUT);
+pinMode(revPin, OUTPUT);
+}
+
+// Main loop, runs repeatedly
+void loop() {
+potentiometerIn = analogRead(A0);
+int output = potentiometerIn / 4;  // Scale to match PWM duty cycle (0-255)
+
+if (digitalRead(switchPinFwd) == LOW) {
+analogWrite(fwdPin, output);
+}
+
+if (digitalRead(switchPinRev) == LOW) {
+analogWrite(revPin, output);
+}
+}</code></pre>
+
+        <a href="https://github.com/jovandrei/jovandrei.github.io/blob/main/code/snack_selector/snack_selector.ino" class="button">View Code on GitHub</a>
+    </body>
+</html>

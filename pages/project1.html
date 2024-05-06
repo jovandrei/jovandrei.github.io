@@ -1,0 +1,109 @@
+<html>
+	<body>
+                <header>
+                        <h2><a href="#">OAuth 2.0 Authorization Server with Flask and Authlib</a></h2>
+                </header>
+
+                <p>OAuth 2.0 is an industry-standard protocol for authorization. It's widely used by many web services to grant limited access to users' resources. In this project, I built an OAuth 2.0 Authorization Server using Flask and Authlib. This server allows client applications to authenticate users and access their data using authorization codes and bearer tokens.</p>
+                <h4>Project Overview</h4>
+                <p>The goal of this project was to set up an authorization server that issues authorization codes to clients and then exchanges those codes for access tokens. The access tokens are then used to grant limited access to protected resources.</p>
+                
+                <h4>Key Components</h4>
+                <ul>
+                        <li><strong>Flask and Authlib Integration:</strong> The project uses Flask as the web framework and Authlib for handling OAuth 2.0 protocols. Authlib integrates seamlessly with Flask and provides built-in support for the OAuth 2.0 specification.</li>
+                        <li><strong>Client and User Models:</strong> The server includes models for clients and users. The Client class represents the application trying to access the resources, while the User class represents the end-user.</li>
+                        <li><strong>Authorization Code Grant:</strong> The server uses the authorization code grant flow, which involves redirecting the user to the authorization server to obtain an authorization code and then exchanging that code for an access token.</li>
+                        <li><strong>Bearer Token Validator:</strong> The server uses bearer tokens for authenticating API requests. The BearerTokenValidator ensures that incoming requests are authenticated correctly using the issued tokens.</li>
+                </ul>
+                
+                <h4>Implementation</h4>
+<ol>
+<li><strong>Setting Up Flask and Authlib:</strong> Flask was used as the web framework, and Authlib was integrated to provide OAuth 2.0 support:</li>
+<pre><code>from flask import Flask, request, jsonify
+from authlib.integrations.flask_oauth2 import AuthorizationServer, ResourceProtector
+from authlib.oauth2.rfc6749.grants import AuthorizationCodeGrant
+from authlib.oauth2.rfc6750 import BearerTokenValidator</code></pre>
+<li><strong>Client and User Classes:</strong> The Client and User classes were defined to model the client applications and users of the system:</li>
+<pre><code>class Client:
+def __init__(self, client_id, client_secret, redirect_uri):
+self.client_id = client_id
+self.client_secret = client_secret
+self.redirect_uri = redirect_uri
+
+class User:
+def __init__(self, username):
+self.username = username</code></pre>
+<li><strong>Authorization Code Grant:</strong> The AuthorizationCodeGrant class was customized to handle the issuance and validation of authorization codes:</li>
+<pre><code>class MyAuthorizationCodeGrant(AuthorizationCodeGrant):
+def create_authorization_code(self, client, grant_user, request):
+return "authorization-code"
+
+def parse_authorization_code(self, code, client):
+return User("test_user")
+
+def delete_authorization_code(self, authorization_code):
+pass</code></pre>
+<li><strong>Bearer Token Validator:</strong> The MyBearerTokenValidator class was used to validate incoming bearer tokens for API requests:</li>
+<pre><code>class MyBearerTokenValidator(BearerTokenValidator):
+def authenticate_token(self, token_string):
+token_data = db["tokens"].get(token_string)
+if token_data and not self.token_revoked(token_string):
+return Token(token_data)
+return None
+
+def request_invalid(self, request):
+return False
+
+def token_revoked(self, token):
+return False</code></pre>
+<li><strong>Routes:</strong> The server has routes for handling authorization, token issuance, and protected resources:</li>
+<pre><code>@app.route('/authorize', methods=['GET', 'POST'])
+def authorize():
+grant_user = User("test_user")
+return server.create_authorization_response(grant_user=grant_user)
+
+@app.route('/token', methods=['POST'])
+def issue_token():
+return server.create_token_response()
+
+@app.route('/api')
+@require_oauth('profile')
+def api_me():
+return jsonify(user="me")</code></pre>
+<li><strong>Running the Server:</strong> Finally, the server is set up to run and register the custom grant type:</li>
+<pre><code>if __name__ == "__main__":
+server.register_grant(MyAuthorizationCodeGrant)
+app.run()</code></pre>
+</ol>
+
+<h4>Testing the Server</h4>
+<p>To test the server, you can follow these steps using <code>curl</code> commands.</p>
+
+<ol>
+<li><strong>Authorize the Client:</strong> First, the client application needs to get an authorization code by redirecting the user to the authorization server. You can simulate this step with the following command:</li>
+<pre><code>curl -X GET "http://localhost:5000/authorize?response_type=code&client_id=client_1&redirect_uri=http://localhost/callback&scope=profile"</code></pre>
+
+<p>This command should redirect the user to the authorization server, where they can log in and authorize the client. The server should then respond with an authorization code, which you'll use in the next step.</p>
+
+<li><strong>Get an Access Token:</strong> Next, exchange the authorization code for an access token:</li>
+<pre><code>curl -X POST \
+-H "Authorization: Basic Y2xpZW50XzE6c2VjcmV0XzE=" \
+-d "grant_type=authorization_code&code=YOUR_AUTH_CODE&redirect_uri=http://localhost/callback" \
+http://localhost:5000/token</code></pre>
+
+<p>Replace <code>YOUR_AUTH_CODE</code> with the actual authorization code received from the previous step. This command should return an access token.</p>
+
+<li><strong>Access a Protected Resource:</strong> Finally, use the access token to access a protected resource:</li>
+<pre><code>curl -H "Authorization: Bearer YOUR_ACCESS_TOKEN" http://localhost:5000/api</code></pre>
+
+<p>Replace <code>YOUR_ACCESS_TOKEN</code> with the access token you received. This command should return the protected resource.</p>
+</ol>
+                
+                <h4>Conclusion</h4>
+                <p>This project demonstrates how to build an OAuth 2.0 authorization server using Flask and Authlib. The server handles the authorization code flow, issues bearer tokens, and protects resources using those tokens. This is a great starting point for building secure, scalable APIs that leverage OAuth 2.0 for authorization.</p>
+
+                <p></p>
+                <a href="https://github.com/jovandrei/jovandrei.github.io/blob/main/code/python_scripts/oauth/oauth_server.ipynb" class="button">View Code on GitHub</a>
+                <p></p>
+        </body>
+</html>
