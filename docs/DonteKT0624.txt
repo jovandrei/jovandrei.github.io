@@ -1,0 +1,1299 @@
+Audio file
+2024_06_24_14_11_59.mp3
+Transcript
+00:00:00 Speaker 1
+Really.
+00:00:07 Speaker 1
+Well, I'm glad I was able to.
+00:00:22 Speaker 3
+Which which team are you with, right.
+00:00:24 Speaker 1
+Now I think away.
+00:00:26 Speaker 2
+Big.
+00:00:27 Speaker 2
+Big is just all one and just framework and just in Gateway. So this is what happened with Gateway was.
+00:00:34
+Saying.
+00:00:35 Speaker 2
+Well, no, this is what I'm about to explain.
+00:00:38 Speaker 1
+So.
+00:00:38 Speaker 2
+About the consolidation, so.
+00:00:42 Speaker 2
+You saw this? How? Everything looks right. What you'll notice is there's.
+00:00:45 Speaker 1
+Yeah.
+00:00:46 Speaker 2
+No gateway on it.
+00:00:48 Speaker 2
+There's another call gateway there.
+00:00:50 Speaker 3
+Yeah.
+00:00:52 Speaker 2
+And then there's this other term that people keep talking about called neon.
+00:00:56 Speaker 1
+M.
+00:00:57 Speaker 2
+Neon is a completely new architecture.
+00:01:03 Speaker 2
+It stands for new.
+00:01:05 Speaker 2
+Entertainment. Ontology. NLP.
+00:01:09 Speaker 2
+So basically the overall need was this.
+00:01:15 Speaker 2
+We keep on boarding new agents because TV. We have sports, we have home, we have Sky. So we have see actually and like they can continue to go on.
+00:01:26 Speaker 1
+Yeah.
+00:01:26 Speaker 2
+We say hey.
+00:01:28 Speaker 2
+Why don't we have some consolidation? So there's one agent that can handle a lot of this stuff because there's a lot.
+00:01:36 Speaker 2
+Of crossover.
+00:01:37 Speaker 2
+TV and Sports TV has a lot of sports stuff in there. It has teams and has the games. All this stuff. It just wasn't fine-tuned to handle sports as well as.
+00:01:43
+Hmm.
+00:01:47 Speaker 2
+Sports agent like sports is.
+00:01:48 Speaker 1
+Yeah.
+00:01:48 Speaker 2
+Only going to just work.
+00:01:50 Speaker 2
+Home agent is his own.
+00:01:52
+Little.
+00:01:53 Speaker 2
+Sky and soy, the ones over in the UK, Europe, all that stuff.
+00:02:00 Speaker 2
+They are similar to TV because they operate the same way, they just have different like pipelines and how they handle things, how they send things and the different clients that they interact with. But they all handle what we call entertainment.
+00:02:18 Speaker 2
+So they said we should make one agent.
+00:02:21 Speaker 2
+That we called the entertainment agent or though, say, the neon agent.
+00:02:23 Speaker 1
+MHM.
+00:02:26 Speaker 2
+And that one is we want one agent that can handle all types of entertainment, which we consider things like movies, music, videos, sports. Then like any of that.
+00:02:35 Speaker 2
+Stuff.
+00:02:36 Speaker 2
+So what we said is we're going to consolidate all of that.
+00:02:39 Speaker 2
+But the other issue was.
+00:02:42 Speaker 2
+Remember when I showed like the intents and one was like team name and one was like series and sports live?
+00:02:49 Speaker 2
+There was every time a new agent came on, they got configured stuff and just name it whatever they want. Like if I want Sky has an intent called chat where they want.
+00:02:58 Speaker 2
+To talk to.
+00:02:58 Speaker 2
+Whatever TV has an intent called Deep Link, we have one called menu. We have one called what's on. We have one called app execution while we have one.
+00:03:08 Speaker 2
+Called app search, whatever.
+00:03:11 Speaker 2
+We said, hey, we're going to become continue to move globally.
+00:03:16 Speaker 2
+Allow, like sell our products and let other people utilize our stuff.
+00:03:21 Speaker 2
+We need to find a way to make it easier.
+00:03:23 Speaker 2
+To onboard new agents.
+00:03:25 Speaker 2
+And one of the ways to do that is to.
+00:03:26 Speaker 2
+Create a completely.
+00:03:27 Speaker 2
+New ontology and ontology is just like the rules and definitions for.
+00:03:32 Speaker 2
+Whatever. So.
+00:03:35 Speaker 2
+They they created this team LDL language design and labeling. That's a separate team and what they do is they create the new ontology and what the new ontology does is says, hey, instead of things like movies or series or music video or other and all this other stuff, we're going to consolidate.
+00:03:55 Speaker 2
+All those, and we're going to have a top level thing called go to.
+00:03:58 Speaker 2
+Because it's basically supposed to be like comments in the language I want to go to this menu. I want to go to this thing. I want to go to this thing. Whatever. Yeah. So they have go to and then underneath it or have like metadata to say what you're actually trying to get to. So like, where?
+00:04:03 Speaker 1
+1.
+00:04:12 Speaker 2
+We.
+00:04:12 Speaker 2
+Used to have movie and neon would be go to with.
+00:04:16 Speaker 2
+An INT type of movie.
+00:04:18 Speaker 2
+And so.
+00:04:20 Speaker 2
+A lot of stuff like closed caption on closed caption off.
+00:04:24 Speaker 2
+Video description and all that stuff. They could consolidate that to like a settings intent and the metadata would.
+00:04:31 Speaker 2
+To determine what you're trying to do.
+00:04:33 Speaker 1
+MHM.
+00:04:34
+So.
+00:04:35 Speaker 2
+Neon is basically saying.
+00:04:38 Speaker 2
+Anybody who comes into our system.
+00:04:39 Speaker 2
+Any new agent Weaver?
+00:04:42 Speaker 2
+They're going to have to utilize the same ontology, so it's going to be shared across everything. It doesn't matter if you're a sky. It doesn't matter if you're a sports. It doesn't matter if your TV query, all of you are going to.
+00:04:52 Speaker 2
+Have the same.
+00:04:53 Speaker 2
+Language defined and then it's up to the agents to say based off of what we get back from Cordia to logical forms.
+00:04:59 Speaker 2
+With this new.
+00:05:00 Speaker 2
+Ontology.
+00:05:01 Speaker 2
+This is what we want to do.
+00:05:03 Speaker 2
+So that was one of the needs for this new ontology and.
+00:05:09 Speaker 2
+It also meant that the architecture.
+00:05:11
+Of our system will.
+00:05:12 Speaker 2
+Change so a lot of this stuff. While the flow you can still think of it is very much the same.
+00:05:20 Speaker 2
+Thing.
+00:05:21 Speaker 2
+The architecture changed.
+00:05:23 Speaker 2
+To.
+00:05:25 Speaker 2
+Pretty much. Well, let me not say change the architecture is changing because currently they're rewriting like these microservices to just be one service called Gateway. So like.
+00:05:42 Speaker 2
+Person says something.
+00:05:46 Speaker 2
+And it will just go to.
+00:05:51 Speaker 2
+Gateway Gateway is going to do all the stuff like speech, session, all that stuff. It's also going to do all.
+00:05:52 Speaker 1
+Hmm.
+00:05:57 Speaker 2
+The domain selector stuff.
+00:05:59 Speaker 2
+Gateway is who's going to call.
+00:06:04 Speaker 2
+The agent.
+00:06:08 Speaker 2
+And.
+00:06:10 Speaker 2
+The agents will call.
+00:06:13 Speaker 2
+In LP.
+00:06:15 Speaker 2
+Now what I put over here?
+00:06:17 Speaker 2
+That shouldn't be.
+00:06:19 Speaker 2
+Is ML and soda because those two are not used in the old architecture.
+00:06:25 Speaker 2
+Put them so that you would at least know what they are, because in this.
+00:06:27 Speaker 1
+OK.
+00:06:28 Speaker 2
+1.
+00:06:31 Speaker 2
+It's interesting because there is an override in the current system, but it's not solar, it's an old override that we're going to replace with solar.
+00:06:40 Speaker 1
+So the translation is still in progress, or so there's like beta users or OK.
+00:06:46 Speaker 2
+I'll show you how we do it, but.
+00:06:49 Speaker 2
+And then machine learning. There was a microservice called DLP which was deep learning in LP which was the.
+00:06:56 Speaker 2
+Precursor to what is now machine learning, so with the neon architecture.
+00:07:02 Speaker 2
+Some of the benefits are that.
+00:07:05 Speaker 2
+We have some we have, we might have less external calls from the agent perspective.
+00:07:11 Speaker 2
+We are implementing machine learning and one of the biggest benefits of the machine learning.
+00:07:18 Speaker 2
+Is currently right now if House of the Dragon comes up and people keep on saying HOD.
+00:07:23 Speaker 1
+M.
+00:07:27
+Hmm.
+00:07:28 Speaker 2
+We have to go into the system, manually, add a synonym of hotd to House of the Dragon to make sure it works for.
+00:07:34 Speaker 2
+People, right?
+00:07:35 Speaker 2
+Machine learning should be able to say, hey, we do, we do annotations. We see enough people to say HOTD we annotate it that way and it will start to get smarter and know this is what people are trying to do without us.
+00:07:47 Speaker 1
+Yeah.
+00:07:48 Speaker 2
+Having to do a lot of manual intervention of adding synonyms, so machine learning is supposed to start helping us not have to add patterns. Not to do that, they annotate the LDL team works with editorial, they annotate a bunch of queries and they start to.
+00:08:02 Speaker 2
+See like hey.
+00:08:04 Speaker 2
+Users, when they say this type of thing, this is what they're trying to do this when they say this type of thing, this what they're trying to do. So as you retrain the model, it gets smarter and smarter. And now you don't have to add manual patterns. You don't have to add manual sending them to the system can start to learn. Hey, if a user says like, take me to and they say CNN.
+00:08:24 Speaker 2
+And then they see another query where it says take me to TBS and then take me to HBO. And now they say take me to Disney.
+00:08:33 Speaker 2
+With all these other ones, our system is doing a channel and Disney is ambiguous because I don't know if the app or the channel. We can be smart enough to know users are trying to go to the.
+00:08:36 Speaker 1
+MHM.
+00:08:42 Speaker 2
+Channel. So we're going to do that without.
+00:08:43 Speaker 2
+Having to like manually do it so.
+00:08:46 Speaker 2
+Oh.
+00:08:48 Speaker 2
+That's where like the NLP is there and then.
+00:08:53 Speaker 2
+This one still does.
+00:08:56 Speaker 2
+Domain selector and currently.
+00:09:00 Speaker 2
+It still doesn't answer selector.
+00:09:04 Speaker 2
+The difference here is where I said agents.
+00:09:10 Speaker 2
+Instead of TV and sports at home in this case.
+00:09:15 Speaker 2
+It would just be.
+00:09:22 Speaker 2
+Voice agent.
+00:09:25 Speaker 2
+At home, because we are working to consolidate TV and sports into one.
+00:09:29 Speaker 2
+Agent.
+00:09:30 Speaker 2
+So this one agent now only has one and Elpida call because it handles TV and sports because it has all of the logic from both of those agents combined.
+00:09:41 Speaker 2
+Will whomever being absorbed in the voice agent I don't know, because it's not technically entertainment, but the goal is eventually like Sky will move over to just be a voice agent and then sleep and all the other entertainment stuff will just have one agent.
+00:09:58 Speaker 1
+MHM.
+00:09:59 Speaker 2
+And they can process everything and then we don't have these multiple backlight services. We have gateway.
+00:10:06 Speaker 2
+This is what's happening. This is the current transition that's happening now like we currently have split traffic and production where there is some that goes just to the voice agent, gets the new ontology, and then the older stuff gets to.
+00:10:19 Speaker 2
+The older but.
+00:10:20 Speaker 1
+OK.
+00:10:23 Speaker 2
+Future.
+00:10:26 Speaker 2
+Some thoughts are from gateway purposes. We call domain selector. Domain selector will say entertainment and home.
+00:10:37 Speaker 2
+The question in that case is.
+00:10:39 Speaker 2
+Why does agent need to call NLP?
+00:10:42 Speaker 2
+If I know which.
+00:10:46 Speaker 2
+Domain to call. Why can't we just call that NLP up there?
+00:10:51 Speaker 2
+And then just pass the list of logical forms to the appropriate agents, so like eventually.
+00:10:58 Speaker 2
+We NLP won't be called by the agent, NLP will just be called by Gateway.
+00:11:03 Speaker 2
+And then instead of passing.
+00:11:04 Speaker 2
+And.
+00:11:05 Speaker 2
+All of this stuff to the agents, they'll just pass a list of logical forms with the context BLOB, so the agent would just say here's what I got. Let me do my process and then.
+00:11:15 Speaker 1
+Figure out what to do so only sell to make less hubs and then like reduce the.
+00:11:18 Speaker 2
+MHM.
+00:11:20 Speaker 1
+Then the like.
+00:11:20 Speaker 2
+Yeah, because in that case.
+00:11:23 Speaker 2
+Answer Selector would be in the agent.
+00:11:28 Speaker 2
+Instead of from Gateway because they thought this when voice agent has everything.
+00:11:34 Speaker 1
+Yeah.
+00:11:35 Speaker 2
+It knows was.
+00:11:38 Speaker 2
+So checking against like if I say.
+00:11:40 Speaker 2
+Cowboys and voice it if I say Cowboys now, it's possible that there could be a movie called Cowboys and Sports Evening and Return the team to Dallas Cowboys and then we got to figure out which one.
+00:11:51 Speaker 2
+Should we?
+00:11:52 Speaker 2
+Pick if they're all together and I say Cowboys internally from Cordy. I'm going to get that movie. I'm going to get that.
+00:12:00 Speaker 2
+Team. And so there's no other agent to compare against and reality is just OK, which one do I pick? And that's all internal agent process.
+00:12:08 Speaker 2
+So the goal is to eventually move the answer selection logic like which one do you pick over this? How do you do these rules should be handled by the agent because the agent is the one that's.
+00:12:18 Speaker 2
+Like doing something on all this.
+00:12:20 Speaker 2
+Stuff so we wouldn't need to go back here and so.
+00:12:22 Speaker 1
+Yeah.
+00:12:26 Speaker 2
+I would love it if that was just the only future plan, but with this reorg we got some other teams on voice and so now.
+00:12:36 Speaker 2
+As further questions about how things are going to look in the future, which I won't even begin to try to like speculate because I wasn't in those.
+00:12:43 Speaker 2
+Meetings.
+00:12:44 Speaker 2
+But.
+00:12:45 Speaker 1
+When you watch movie never went around to.
+00:12:47 Speaker 2
+Yeah, well, yeah. So.
+00:12:51 Speaker 2
+Welcome to Comcast, where we do reorders almost.
+00:12:53 Speaker 2
+Every six months.
+00:12:54 Speaker 1
+Alright.
+00:12:55 Speaker 2
+Is a running joke, but people are like I'm not really joking because every time they do a reorder when we have like a big.
+00:13:02 Speaker 1
+Properly.
+00:13:02 Speaker 2
+All, all staff meeting, apparently you can't call them all hands meetings anymore because it's.
+00:13:10 Speaker 2
+Not inclusive to people who may not have hands.
+00:13:13 Speaker 1
+Really.
+00:13:14 Speaker 2
+I said hey, when we started, I said.
+00:13:19 Speaker 2
+They'll do everything but pay people more.
+00:13:22 Speaker 2
+So.
+00:13:23 Speaker 2
+Yeah.
+00:13:24 Speaker 2
+You can't call they.
+00:13:25 Speaker 2
+Call all staff meetings now and that's why when they happen, they.
+00:13:29 Speaker 2
+So.
+00:13:34 Speaker 2
+Whenever they have like a Q&A, there's always some matter who says so. When's the next record? Because they happen a lot, but they happen to varying degrees because you got to think if you at a company that's big, right, if you have somebody who's like.
+00:13:48 Speaker 2
+A senior VP of some team and they leave.
+00:13:52 Speaker 2
+There has to be a rear, right? What happens to all of the people underneath who goes where? How do they do this? So some reorders, they say basically when somebody leaves or somebody retires, this can be a good time to say like OK, we can consolidate, we can align certain things. Sometimes they do things because it makes more sense.
+00:14:10 Speaker 2
+Like for us on voice.
+00:14:15 Speaker 2
+Rex team that I mentioned and a couple other things like ETL which has all the data. All of those are under content discovery which is.
+00:14:16 Speaker 1
+M.
+00:14:24 Speaker 2
+What sounds like how?
+00:14:25 Speaker 2
+Do I get to this concert?
+00:14:26 Speaker 2
+So they eventually say content discovery voice and these teams are very close to each other, so they united under one person who was over both of them and then with the reorg they were saying, OK, which teams on content discovery actually make more sense to be particularly their voice? And is there anything in done in voice that should be over in content discovery? So this goes into the fake thing.
+00:14:48 Speaker 2
+That was the thing called fringe with the framework and ingest and you know, gateway, they both did.
+00:14:53 Speaker 2
+A lot of stuff.
+00:14:54 Speaker 2
+Two of the biggest things that French did was all of our ingestion data. So like we get all the data, we validate it do all.
+00:15:02 Speaker 2
+This other stuff.
+00:15:03 Speaker 2
+Put it in the UI, all that stuff.
+00:15:05 Speaker 2
+And then framework which is like control plane and all that stuff that Kenny said work on.
+00:15:10 Speaker 2
+And then Gateway did all of the back end speech AI all this?
+00:15:14 Speaker 2
+With the reorg, they said, hey, we have an ETL team over here that does all of the data processing anyway and a lot of that data is the same data that we're using. So why?
+00:15:23 Speaker 2
+Do we have?
+00:15:24 Speaker 2
+To duplicate that work, instead we should take all of the ingest stuff and just put it under ETL because they're already doing it. So basically, friends just became really small because the other thing they did.
+00:15:35 Speaker 2
+This thing called NIS which is a negative interaction score, is a metric that product team uses to see like.
+00:15:43 Speaker 2
+Our users happy with what's happening is basically if you see people keep saying you.
+00:15:49 Speaker 2
+Somehow we transcribe you.
+00:15:51 Speaker 2
+We don't know if they want to go to the show on Netflix or if they're trying to go to the app, so NIS shows it looks best session and you can see like what somebody says. When somebody says until they eventually stop and what they see overwhelmingly is when people say you you, they eventually land in YouTube because they're trying to go to the app. So that's how product will make their decisions and say hey.
+00:16:12 Speaker 2
+When customers are trying to do this and it's ambiguous.
+00:16:14 Speaker 2
+So there's a.
+00:16:14 Speaker 2
+Clear audio, whatever this is what they're trying to do. And so they use it for data-driven decision.
+00:16:17
+MHM.
+00:16:20 Speaker 1
+Yeah.
+00:16:21 Speaker 2
+NIS there was work on friends to do stuff for like NIS pipeline that also moved the content discovery so they said well because friends is so small.
+00:16:31 Speaker 2
+We're going to combine that with.
+00:16:32 Speaker 2
+Gateway because DJ was.
+00:16:35 Speaker 2
+I think over both of them.
+00:16:37 Speaker 4
+You know they.
+00:16:37 Speaker 2
+Put them over both. So now it just became big with the framework and even though we really, well, we're not supposed to.
+00:16:47 Speaker 2
+The QA guy, Chilton that over.
+00:16:51 Speaker 2
+He's working on some of the validation of data and because of that there's a transition. We did a demo. The other team liked it, so he's still working on it before we transition because we still have our data that we validate here. So it's not like we just got.
+00:17:05 Speaker 2
+Like cold Turkey?
+00:17:05 Speaker 1
+Yeah.
+00:17:06 Speaker 2
+But yeah, basically all of that is going to be condensed so that gateway.
+00:17:12 Speaker 2
+Is just combining some of these voice agent is combining all it's called voice agent. You'll hear it say voice Agent, Entertainment agent or neon agent.
+00:17:22 Speaker 2
+All three are synonymous when they have agent at the end, neon is the architecture, new entertainment, ontology and LP.
+00:17:24 Speaker 1
+Yeah.
+00:17:30
+MHM.
+00:17:31 Speaker 2
+And then Cody is going to be doing more. And so I'll show you some examples of like just how different.
+00:17:40 Speaker 2
+Neon is compared to the current.
+00:17:44 Speaker 2
+System.
+00:17:46 Speaker 2
+So you can start to see like.
+00:17:48 Speaker 2
+The value add and just some of the differences.
+00:17:57 Speaker 4
+Let's see.
+00:17:58 Speaker 4
+So.
+00:18:06 Speaker 2
+This is like the darkest TV.
+00:18:08 Speaker 4
+Ever. And I don't know why it's so.
+00:18:12 Speaker 3
+It's like going gym and dark, yeah.
+00:18:18 Speaker 2
+I feel like, OK, peace, stay there.
+00:18:21 Speaker 2
+All right.
+00:18:21 Speaker 2
+So.
+00:18:23 Speaker 2
+I'll show you some different things.
+00:18:27 Speaker 2
+I saw you earlier with.
+00:18:31 Speaker 2
+Like Dallas Cowboys, of course, Asian will never come in, right? So in this case, say I say House of the Dragon.
+00:18:47 Speaker 2
+So currently I can tell this is TV agent the current the older architecture because I'm getting the series.
+00:18:57 Speaker 2
+This is the insider knowledge. So in this case when you say House of the dragon, you get a series. This is the ID.
+00:19:05 Speaker 2
+And TV eventually does the deep.
+00:19:08 Speaker 2
+Link that we talked about to go here.
+00:19:11 Speaker 2
+If I want to, we have this flag right now.
+00:19:15 Speaker 2
+On Neon that will trigger it to go to the new.
+00:19:18 Speaker 2
+System in this case.
+00:19:21 Speaker 2
+House of the Dragon. See the intent is now go to but.
+00:19:27 Speaker 2
+The exact same idea. So it's it looks differently. This says House of the Dragon instead of intent series it has into it go go to with the INT type of series. Master has all this. It's the same idea. So it has the same metadata.
+00:19:38 Speaker 1
+Yeah.
+00:19:42 Speaker 2
+And everything on.
+00:19:43 Speaker 2
+It we just might ingest some more.
+00:19:44 Speaker 2
+Things so we.
+00:19:45 Speaker 2
+Can do like the genre tag and stuff.
+00:19:47 Speaker 1
+Do you have a name for the legacy of you?
+00:19:48 Speaker 1
+Picture.
+00:19:50 Speaker 1
+Like.
+00:19:52 Speaker 2
+OK. And then in here?
+00:19:56 Speaker 2
+You'll see that we still.
+00:19:57 Speaker 2
+Have the deep link same deep link.
+00:20:00 Speaker 2
+But the relevance block remember that looks a little bit different because now it's just go to the series master instead of just series.
+00:20:10 Speaker 2
+So a lot of this stuff looks.
+00:20:12 Speaker 2
+It can look very similar in this case.
+00:20:15 Speaker 2
+One thing to note.
+00:20:18 Speaker 4
+Courtney used to return.
+00:20:21 Speaker 2
+A score.
+00:20:23 Speaker 2
+They still do. I want you to see something. So the.
+00:20:25 Speaker 2
+Score on your score one.
+00:20:28 Speaker 2
+And that's basically Cory saying, hey, you matched exactly on this title and with TV agent and our legacy system used to do is basically say if we match the bunch of stuff.
+00:20:38 Speaker 2
+Will people want the highest score? So if we call Korea House the Dragon and we got 20 logical horns back?
+00:20:46 Speaker 2
+If one has a score of one and everything else has a score of .93, we're going to pick that one score of one. And if you want to see according response.
+00:20:56 Speaker 4
+I'll show you what that looks like.
+00:20:59 Speaker 1
+What determines the score?
+00:20:59 Speaker 4
+Yeah.
+00:21:04 Speaker 2
+They have a bunch of processing is is caffeine is a confidence score.
+00:21:10 Speaker 2
+And so in the legacy system, it may be different criteria than.
+00:21:16 Speaker 2
+Was in this current system.
+00:21:19 Speaker 2
+But I will show you this is a query where I think I was going to.
+00:21:25 Speaker 4
+Saucy House of the Dragon, right.
+00:21:29 Speaker 2
+I say House of the Dragon. This is a prime like stack, so I can see what happens when Cory, even though the ports are closed in production, this is the QA stack where we have like production. So technically that's a House of the Dragon.
+00:21:44 Speaker 2
+There are 15 different things that quality return.
+00:21:48 Speaker 2
+There's this menu.
+00:21:51 Speaker 2
+Menu, Menu, menu, trailer with Season 2 trailer season one.
+00:22:03 Speaker 4
+Trailer trailer series this is a series which is the official Game of Thrones podcast.
+00:22:13 Speaker 2
+I know that the actual series.
+00:22:16 Speaker 2
+And usually at the bottom you'll start to see the partial matches, so this is a menu for the House of the Dragon fan.
+00:22:21 Speaker 2
+Club.
+00:22:22 Speaker 4
+That has to score a point now to.
+00:22:24 Speaker 2
+There's a lot of internal processing from.
+00:22:27 Speaker 2
+The agent to say, hey, this is what I'm going to pick based off before you get back, right?
+00:22:32 Speaker 2
+In neon, the difference here is.
+00:22:36 Speaker 2
+We no longer use score to differentiate.
+00:22:40 Speaker 2
+The rest of that stuff, we might not think because it was unavailable or.
+00:22:45 Speaker 2
+This might have higher priority or whatever, but now if we.
+00:22:49 Speaker 2
+An example I always looked at, which I think they stopped doing, was like Abbott Elementary. If you say Abbott Elementary, I think we returned two things from Korea.
+00:23:09 Speaker 4
+About elementary here.
+00:23:11 Speaker 2
+And then there was another one, this one older, and Quinton Brunswick have an elementary well. The score point is that.
+00:23:18 Speaker 2
+In the legacy system, we get a score of one and a score of 27. We are clearly picking the one with a score of 1.
+00:23:26 Speaker 2
+And Leon, we cannot do that.
+00:23:29 Speaker 2
+The agent does not have any.
+00:23:35 Speaker 2
+I guess.
+00:23:37 Speaker 1
+Authority.
+00:23:39 Speaker 2
+To say, hey, this score is lower, so we don't want to use it because it's moving to machine learning where a lot of stuff is prediction based and you can never get a score of.
+00:23:46 Speaker 2
+One, unless you're just tweaking.
+00:23:47 Speaker 1
+Yeah.
+00:23:48 Speaker 2
+Basically, they're saying if Corey gives it back, we have to treat it as if it is a viable, a viable match. It doesn't matter what the score is. So what that means is when you look at NEO.
+00:24:00 Speaker 4
+Done.
+00:24:01 Speaker 2
+A lot more things will now result in searches because we're going to choose this on more things because it's just going to say here's the data.
+00:24:08 Speaker 2
+We match on more data, we're going to do chooses, so it's more searches.
+00:24:11 Speaker 1
+Yeah, yeah, because the scoring might only be like might only consider the text is like on how close the title is, close the machine learning myself. Maybe there's a better match more than the text itself or.
+00:24:26 Speaker 2
+And so.
+00:24:28 Speaker 2
+While initially it could seem like a bad thing.
+00:24:31 Speaker 2
+Or it could seem wrong when you're moving to a new system. The goal is this. I mentioned that this content discovery and their aligned voice with it. Our system and legacy was more of an exact match engine like we wanted to get people to exactly where they wanted to get to the least amount of clicks, least amount of commands, whatever.
+00:24:51 Speaker 2
+That's still the goal, but we're not so determined or pressed to say, take them exactly here for everything. The goal is we have all of this content.
+00:24:59 Speaker 1
+Yeah, yeah.
+00:25:02 Speaker 2
+How do we make sure users are able to see all?
+00:25:06 Speaker 2
+Because in the old system, realistically they'd never be able to get to that thing that Oprah and Quinta Brunson having somebody.
+00:25:14
+They want.
+00:25:16 Speaker 2
+Unless the decision has to search for active and.
+00:25:19 Speaker 2
+Then you have found the surgery.
+00:25:20 Speaker 2
+Right now, if I say Abbott Elementary and both are return from courting, I'm going to do a choose because the priority and I'm going to do a search. So what more searches means is that the customers now have more access.
+00:25:28 Speaker 1
+But.
+00:25:35 Speaker 2
+To all of our content, stuff that was previously undiscoverable or hard to surface, and now you might surface it.
+00:25:37 Speaker 1
+Yeah.
+00:25:43 Speaker 1
+More you know, unless you knew the title.
+00:25:46 Speaker 2
+Exactly. And then that should work. But like because Abbott Elementary is a substring of that, but that's not a substring of Abbott elementary. So if you say the whole thing, that should be the only thing that's returned. If they have the elementary, that and other things will be returned. So it's that's one of the things that neon is also going to do.
+00:25:54 Speaker 1
+Right, right.
+00:26:06 Speaker 2
+I guess for like more of a value add as it allows people to get to.
+00:26:09 Speaker 2
+More of our concept.
+00:26:09 Speaker 1
+That's good.
+00:26:11 Speaker 2
+Another thing is when I mentioned Rex, we call Rex internally with like TV, sports all the stuff for availability, right?
+00:26:19 Speaker 1
+Yeah.
+00:26:20 Speaker 2
+When I say heat, we remember we call.
+00:26:22 Speaker 2
+TV and we call sports.
+00:26:24 Speaker 2
+That means that both of those agents called Ricks.
+00:26:30 Speaker 2
+When you consolidate that to one agent.
+00:26:32 Speaker 2
+That just means that instead of two Rex calls is one.
+00:26:36 Speaker 2
+So like there's some places where we see the consolidation.
+00:26:40 Speaker 2
+Is more than just.
+00:26:42 Speaker 2
+The data it also helps with some of our calls and should make things quicker. Latency should probably go down. We won't overload systems and in some cases things.
+00:26:50 Speaker 4
+Might go up.
+00:26:51 Speaker 1
+Have you compared like because you're saying here is like 3 seconds right? You have like a comparison how faster than your system is.
+00:26:58 Speaker 2
+Yes, right now it looks pretty even, but that's because.
+00:27:04 Speaker 2
+Of the way our system is set up. So first, remember when I said there's new data centers. This is what three data centers are one to 16 and 16, so.
+00:27:12 Speaker 1
+So.
+00:27:16 Speaker 2
+96 total.
+00:27:17 Speaker 2
+But what happens is normally when we do deployments to production, we start with a half a data center.
+00:27:26 Speaker 2
+For one day, then we'll do 1 1/2 for the next day and then the remaining DC is on the 3rd day. So we start and you can compare like the reason is because you can prepare, ask for A to Ashburn B. If B has all of the.
+00:27:40 Speaker 2
+Like production versions and a has a new version. Then you can start to see like exactly in the same data as in the same software hardware and everything is there going to be an elevation of errors and a versus B because then you can kind of see like what's going on. What we did for Neon is we started that way, but.
+00:28:00 Speaker 2
+We we ended up ultimately deploying everywhere but.
+00:28:06 Speaker 2
+We have these things called neon conditions. It used to be split dot IO where we would.
+00:28:13
+I don't know if I can get to.
+00:28:14 Speaker 2
+This without my phone.
+00:28:17
+Yeah.
+00:28:18 Speaker 1
+Is there any performance testing too?
+00:28:21 Speaker 2
+Yeah, we do. We do. Look, we just had a whole conversation. That meeting was on. We were talking about some of the issues we're seeing with performance and.
+00:28:41 Speaker 2
+Because one thing that we noticed is a big difference in the new.
+00:28:47 Speaker 4
+You know, architecture.
+00:28:49 Speaker 2
+Is NLP is going to now have more queries go to it because where sports had his own NLP and TV had his own LP, we combine them all those queries now go to one NLP service so they're doing load testing and they're saying hey, when we get to a certain amount of credits per second, we're starting to see failure because NLP.
+00:29:10 Speaker 2
+Used to be more like split with the traffic and now it's all on one. So while it can normally handle that.
+00:29:17 Speaker 2
+And it was saved by.
+00:29:19 Speaker 2
+In the traffic routing, when now everything's going to it, we're seeing those issues and they may cause problems with spikes.
+00:29:27 Speaker 2
+And so the way we did.
+00:29:29 Speaker 2
+This thing for neon.
+00:29:32 Speaker 2
+Is.
+00:29:34 Speaker 2
+We started off with these things called.
+00:29:40 Speaker 2
+I'll take some credit because I was the first we were trying to figure out how to get this in production and I came up with this little idea where I was like when we first were working on it. Let's just put some queries.
+00:29:52 Speaker 2
+In production and then say, here's a list of queries. Make sure these go to the, enforce them to always go to the and you can split that out. So if those queries came through, we were forced to go to this new architecture and we can start by just looking at those, because if we didn't want to do half data center versus half, it's just everywhere you can start to say, OK.
+00:30:04 Speaker 1
+Yeah.
+00:30:12 Speaker 2
+Women's college basketball for 10% of queries is going to neon. How?
+00:30:17 Speaker 2
+Is that performance?
+00:30:18 Speaker 2
+Compared to the other 90% like, is it faster the slower it's more.
+00:30:21 Speaker 2
+Areas of lever.
+00:30:22 Speaker 2
+We started with.
+00:30:23 Speaker 2
+That and then when we, because we're building neon as we go, we're moving over all of the features for MVP candidate, which is what we're trying to push out now.
+00:30:32 Speaker 2
+The MVP build.
+00:30:35 Speaker 2
+They moved over to using neon conditions.
+00:30:39 Speaker 2
+And what this is?
+00:30:41 Speaker 2
+And basically it's saying like for 10% we want to do all these different rules.
+00:30:46 Speaker 2
+And the rules are.
+00:30:50 Speaker 2
+Where they are.
+00:30:52 Speaker 2
+But they moved them to from here to like S3, but basically the way that we're doing it now is there's a small percent of traffic, like 10% of traffic. If it meets any.
+00:31:01 Speaker 2
+Of these rules, we'll go to.
+00:31:04 Speaker 2
+And the rules are something basically saying from the old legacy system to the new system. So if you have a series.
+00:31:11 Speaker 2
+And in the new system you have to go to and type series master. We want to pick the the system because we know it's the same and we had all these intricate rules to basically say whenever if something matches something here.
+00:31:24 Speaker 2
+How do we know what we want to match?
+00:31:25 Speaker 2
+On it and neon.
+00:31:26 Speaker 2
+For us to select it and so we have all these rules.
+00:31:29 Speaker 2
+Which allows us.
+00:31:31 Speaker 2
+To start looking in production and you can see how some queries will produce the same. Actually I should look at it I guess.
+00:31:41 Speaker 2
+Like some queries will produce the exact same.
+00:31:45 Speaker 4
+It will produce a different.
+00:31:46 Speaker 2
+Like you might see House of the Dragon that's getting to go to and also getting a series in production because some percentage traffic is going to go there. Some percent traffic over there. We have our own specific NIS 4 Neon where they have the graphs just to see like.
+00:32:01 Speaker 2
+For all the customers whose commands are going.
+00:32:03 Speaker 2
+Neon, what's happening here? Like, are they happy? Do we see anything that has a huge fighting in our ASK? Because that means that neon's.
+00:32:04 Speaker 4
+Mm-hmm.
+00:32:11 Speaker 2
+Handling it you.
+00:32:12
+Know.
+00:32:13 Speaker 2
+Less preferred way than TV was, so we have all these different graphs, all these different charts to see like how is neon behaving compared to.
+00:32:15 Speaker 1
+Yeah.
+00:32:24 Speaker 1
+And do you have any insights so far or?
+00:32:27 Speaker 2
+So the reason that it's hard is because we're only using 10% of traffic. The goal is we're about to get the best insight which.
+00:32:33 Speaker 2
+Which is.
+00:32:34 Speaker 2
+When we are finally feature complete, we have our MVP bill for agent, which Steve is working on now to help him test this, we're waiting. Once we fix this. So like for some bugs that need to be.
+00:32:47 Speaker 2
+In.
+00:32:47 Speaker 2
+There and then, NLP is going to give their new release. They're cutting this week. Both of those are integrated, everything is fine.
+00:32:55 Speaker 2
+The goal is in like July 8th that.
+00:32:58 Speaker 2
+Day or around there, we're going.
+00:32:59 Speaker 2
+To push the whole feature complete set with the new gateway release. That just basically says only call entertainment. Don't call TV, don't call sports. Just call this new thing and that's going to be in 1/2.
+00:33:01 Speaker 1
+MHM.
+00:33:09 Speaker 1
+OK.
+00:33:12 Speaker 2
+So we'll be able to see that 1/2 DC will only.
+00:33:15 Speaker 2
+Have the new architecture.
+00:33:17 Speaker 2
+And then we can compare that to everything else.
+00:33:19 Speaker 2
+To.
+00:33:19 Speaker 2
+Yeah. How is this with the feature complete? No, no conditions. We're not even saying pick TV. There's no fault. No, everything's going here. How is it doing? And that's where we'll get the most insight. Right now. We get it because of the percentage. And we can, like, look and see. Like, if the latency was picking up right now, it's pretty much on par. It's not worse.
+00:33:25 Speaker 1
+This title.
+00:33:27 Speaker 1
+Yeah.
+00:33:40 Speaker 2
+It's not like miles, miles better, but I had to explain to one of the managers of company discovery that.
+00:33:49 Speaker 2
+Better.
+00:33:50 Speaker 2
+Doesn't necessarily mean the latency is going to be like decrease. Remember like I said.
+00:33:56 Speaker 2
+The new neon.
+00:33:57 Speaker 2
+Architecture is more than just less consolidation. It's one you're making it easier for new agents to move over with the same ontology and male involved and stuff. So while you have to look at multiple things like the NIS, essential quality is quality.
+00:34:04 Speaker 1
+Yeah.
+00:34:12 Speaker 4
+Enter.
+00:34:14 Speaker 2
+Meaning the users are users having a better experience where the commands are saying is the latency not increased. Our error counts not increased as multiple ways we got to look at it, but we do have everything in.
+00:34:25 Speaker 1
+Place too long for that, though. So was the previous decide designed to can be alluded and causing too many.
+00:34:26 Speaker 2
+So.
+00:34:26 Speaker 2
+Stuff.
+00:34:30 Speaker 1
+Incidents or something?
+00:34:32 Speaker 1
+Or what was the? What was the reason they decided just?
+00:34:34 Speaker 1
+To.
+00:34:35 Speaker 1
+Do this huge switchover.
+00:34:37 Speaker 2
+So.
+00:34:39 Speaker 2
+What happened was we were using DNP, the one that said was a precursor, but it wasn't really that good.
+00:34:45 Speaker 2
+So they wanted to implement machine learning from Corey.
+00:34:49 Speaker 2
+So when we started with was this.
+00:34:52 Speaker 2
+Little Tiger team with machine learning for browse, we took one intent and said we're going to implement machine learning for just this thing and see how much better our system is with machine learning than without.
+00:35:06 Speaker 2
+I was on the Tiger team working on the saw. Some issues, found some fixes or whatever, and but what that did is it led to the overall thing is we need to implement machine learning for everything.
+00:35:18 Speaker 2
+That.
+00:35:19 Speaker 2
+Also coincided with hey, we have all these agents, how do we consolidate this information? Let's make them ontology. And so there was a lot of things happening at once.
+00:35:29 Speaker 1
+MHM.
+00:35:29 Speaker 2
+That we say, you know, we put it all together, we're going to make this new project because it will make.
+00:35:34 Speaker 2
+It easier in.
+00:35:35 Speaker 2
+The long run and it's more scalable.
+00:35:35 Speaker 1
+Hmm.
+00:35:38 Speaker 2
+Because Comcast keeps saying removal removal, we're expanding we have.
+00:35:42 Speaker 2
+Partners here. Cox, Rogers, Videotron.
+00:35:47 Speaker 2
+In the US or in the North America, because Rogers and.
+00:35:54 Speaker 2
+Canada.
+00:35:56 Speaker 2
+Here Cox and US and Comcast. But then we said, hey, we have sky over here and then they said actually we're going to expand to a company in Australia called Foxtel, so they.
+00:36:06 Speaker 2
+Have our system.
+00:36:07 Speaker 2
+And then we were trying to do something in South.
+00:36:10 Speaker 2
+But they got acquired by different companies, so all the stuff we're doing just got put on hold. So there's basically we're expanding to all these different agents.
+00:36:19 Speaker 2
+How how scalable is our system now that every time a new agent comes, we got to redo the system? We got to change like little rules for them. We got to redo all of our tests to handle that. It's not scalable though, and if we're going to become a global system, you need scalability. And so that was.
+00:36:33 Speaker 1
+OK.
+00:36:34 Speaker 1
+For sure.
+00:36:36 Speaker 2
+One of the that was also one of the driving forces of this whole architectures. How can we make our system scalable so that we can continue to expand and keep up with the expansion of what the company wants to do. And so all of that led to this whole design thing.
+00:36:43 Speaker 1
+Yeah.
+00:36:49 Speaker 1
+Yeah, that's good.
+00:36:56 Speaker 2
+So yeah, it's.
+00:37:00 Speaker 2
+Even with the new architecture, you can, I think if you know that old architecture, you just kind of have a high.
+00:37:04 Speaker 2
+Understanding.
+00:37:05 Speaker 2
+Of that, the new architecture is still pretty much the same flow. They're just like changing some names. You can think of it as like a wrapper class, and any object oriented program, right? Like Gateway is just a wrapper around like back end dispatcher.
+00:37:20 Speaker 2
+Currently it's still going to be doing the same things, but just with wrappers from that. That's what you see voice saying is just a wrapper around a different age. It's like here we have the sports logic in here now and then we have the TV logic. So both of the pipelines are in that agent.
+00:37:24 Speaker 1
+Yeah.
+00:37:33 Speaker 2
+And then you eventually start to merge things.
+00:37:35 Speaker 2
+Together and stuff.
+00:37:36 Speaker 2
+So it's still the same flow, but things are going to start changing more because even with neon it's still pretty much the same thing where things are going to change, it's going to be in the future when they say, OK, one of the teams from the reorg that came over here, Wayne, stop, that's they're trying to figure out what do we do with that.
+00:37:54 Speaker 2
+How do we figure it out? Where is that going to fall in the system?
+00:37:57 Speaker 2
+How's that going to change? How does that change what we send off?
+00:38:03 Speaker 2
+There's another initiative you'll hear people talk about called sumo.
+00:38:08 Speaker 2
+And Zumo is what we brand our smart TV's and.
+00:38:12
+North America.
+00:38:14 Speaker 2
+So we had this only IP set-top box is called Flex right now. If you get just Internet you can ask for a flex device.
+00:38:19 Speaker 1
+MHM.
+00:38:24 Speaker 2
+Flex device is just a little set-top box with voice remote and so that that that way it consolidates all of the apps and everything in one area. So you don't have to switch inputs, you don't need fire. Stick all that stuff right.
+00:38:35 Speaker 2
+They said, hey, we like this. They use a different.
+00:38:41 Speaker 2
+I guess back end operating system for like the display people liked it, they said let's put.
+00:38:46 Speaker 2
+This on the smart.
+00:38:47 Speaker 2
+TV.
+00:38:48 Speaker 2
+Compete with like the Rokus and three TV's and all that stuff. That was called X class TV.
+00:38:50
+Yeah.
+00:38:55 Speaker 2
+That went out and they were at the same time. There was one that went out in the sky called Sky Glass.
+00:39:04 Speaker 2
+Those basically were the precursor to like, how do we what do we do now?
+00:39:09 Speaker 1
+MHM.
+00:39:10 Speaker 2
+So we say, OK, we obviously want to be in the smart TV.
+00:39:14 Speaker 2
+Business because people aren't keeping cable like how do we continue to make money when people are cutting their court? So instead we're like, OK, we can sell our.
+00:39:29 Speaker 2
+Technology to different companies, we can make smart TV's, we can do all this other.
+00:39:33 Speaker 2
+Stuff still generate income.
+00:39:36 Speaker 2
+In a way that would keep up with the loss.
+00:39:38 Speaker 2
+Of broadband connections zumo.
+00:39:39 Speaker 1
+Yeah.
+00:39:43 Speaker 2
+Well, when I mentioned Sky glass, people really like that UI because Sky they like their UI a lot and they like that voice system. So they said how do we combine both of these to make something really nice. And they said we want to make a combination of like flex and sky, which they called flexiglass.
+00:40:02 Speaker 2
+1st.
+00:40:03 Speaker 2
+Which eventually became.
+00:40:06 Speaker 2
+Entertainment audience. So it's the future of how our system is going to look. They're going into OS or entertainment OS. You'll hear that fit a lot.
+00:40:15 Speaker 1
+Mm-hmm.
+00:40:16 Speaker 2
+Info as is basically.
+00:40:18 Speaker 2
+Like the sky glass stuff front end.
+00:40:21 Speaker 2
+With a lot of our back end code.
+00:40:24 Speaker 2
+That is what?
+00:40:26 Speaker 2
+Sky glass, like the sky glass is using entos. When I mentioned foxtail over in Australia, their smart TV devices are entos.
+00:40:32 Speaker 1
+Hmm.
+00:40:35 Speaker 2
+The thing that looks like intos over here is what we're calling zumo. Because Zumo is just our new smart TV, that's what we branded, but it looks just like that stuff because it's all basically the new old operating system.
+00:40:49 Speaker 2
+With that.
+00:40:50 Speaker 2
+We have more partners that we expand to like we have a zoom on smart TV's and then it sets our box to zoom or string box.
+00:40:59 Speaker 2
+I'm saying all this stuff because I really have to remember all these little details, but I do want to make sure you know, like when.
+00:41:04 Speaker 2
+You hear it. You're like, oh, that sounds like, yeah.
+00:41:06 Speaker 1
+Mainly.
+00:41:09 Speaker 2
+Charter.
+00:41:10 Speaker 2
+By Charter Spectrum, we have a deal with them where they're using our system, so zumo they have a Charter device Charter 3 Zumo stream box for charter.
+00:41:22 Speaker 2
+They just expanded to Rogers as well. One of the Canadian.
+00:41:25 Speaker 2
+Companies they're using sumo as well.
+00:41:27 Speaker 2
+Zumo doesn't use TV agent. Zumo uses slip agent which is one of the sky agents.
+00:41:34 Speaker 2
+What he uses like a TV data, eventually we're going to have to move that over to entertainment. You save ontology, all this other stuff. And so that is also one of the benefits of neon is we can start to say all of these different things that we're doing to expand the business, whether it's sumo, whether it's consolidate.
+00:41:56 Speaker 2
+Different partners like Cox, all this other stuff. How do we make sure that we can keep doing that? We can keep expanding without having to, like, write all this custom logic for this new person. Now you can think of it this way if.
+00:42:11 Speaker 2
+I don't know. Some other cable company like, say, Verizon, and they just say we want.
+00:42:14 Speaker 2
+To use just.
+00:42:16 Speaker 2
+They can't say well, we want an intent called FiOS. We want an intent called Verizon. It's like, no, what you will get is our ontology. So you will get go tools, you'll get settings, you'll get all this.
+00:42:28 Speaker 2
+Other stuff and.
+00:42:29 Speaker 2
+You need to make sure that your data however is returned. You can utilize it to do what you want to do.
+00:42:35 Speaker 2
+But no more are the days where somebody comes in and say we want this custom thing. We want this custom things like, no, you're going to have to operate within the bounds of what we.
+00:42:42 Speaker 2
+Have.
+00:42:43 Speaker 1
+Yeah.
+00:42:45 Speaker 2
+And so it makes it a lot easier for us to continue to expand without.
+00:42:50 Speaker 2
+Exponentially increasing the amount of work all of us.
+00:42:52 Speaker 2
+Have to do.
+00:42:53 Speaker 1
+Yeah, because we're like.
+00:42:55 Speaker 2
+Is it?
+00:42:55 Speaker 2
+Agent how do we handle all this? But you know the new agent just adds more functional tests. Whatever. Make sure.
+00:43:01 Speaker 2
+It works there, yeah.
+00:43:06 Speaker 2
+High level some technical details, but it's just to make sure you kind of understand what this stuff is, what's going on. Because like I said, y'all join at a time where we're in the middle of a transition to a completely new architecture and you're going to hear like a mix of like you might hear TV, you might hear.
+00:43:23 Speaker 2
+Sports you might hear.
+00:43:24 Speaker 2
+Yeah. And it's like, well, what is the difference right here? Zumo, you might have played.
+00:43:25 Speaker 3
+Yeah.
+00:43:28 Speaker 2
+You might have.
+00:43:29 Speaker 2
+One here like what the hell is?
+00:43:30 Speaker 2
+All this stuff. Yeah. Yeah. And there's documentation for a lot of this stuff. So you can see it. I can send.
+00:43:34 Speaker 2
+You.
+00:43:34 Speaker 2
+Whatever. So you can see like the different stuff like how do I know what's the?
+00:43:36 Speaker 1
+MHM.
+00:43:38 Speaker 2
+Difference between this sumo versus this X1 but.
+00:43:42 Speaker 2
+I think it just helps. When.
+00:43:43 Speaker 4
+You see a little bit of it, so.
+00:43:46 Speaker 2
+That you don't just hear stuff and the.
+00:43:48 Speaker 2
+People throw active things all around like.
+00:43:50 Speaker 2
+You both know what they're talking about.
+00:43:50 Speaker 1
+Yeah.
+00:43:52 Speaker 2
+And I don't like that.
+00:43:55 Speaker 3
+Now I know there's like an old UI and new UI for Cordy.
+00:43:59 Speaker 3
+And then they're like, all going to be the new UI is going to have all three VRX, 40 and then.
+00:44:06 Speaker 3
+Was it? Was it on that or so?
+00:44:08 Speaker 2
+Yeah. Yeah, that's the other one. So this is quarter you, I. This is what I mentioned when you say like all the stuff that matches, I say Comcast.
+00:44:17 Speaker 2
+TV is the legacy. Entertainment is the neon stuff.
+00:44:21
+So.
+00:44:21
+Hmm.
+00:44:21
+Like.
+00:44:22 Speaker 2
+Now look at.
+00:44:23 Speaker 2
+TV I can search for all the. This is where, like all of our data that's.
+00:44:28 Speaker 2
+When we ingest the data.
+00:44:31 Speaker 2
+The FIG team does some.
+00:44:35 Speaker 2
+Something to it.
+00:44:36 Speaker 2
+Massage data or whatever and then they put it into our elastic search index, which is what this is reading.
+00:44:42 Speaker 2
+From.
+00:44:43 Speaker 2
+So like you'll see all the doc ID's ID's. So like if I wanted to see.
+00:44:48 Speaker 2
+This game of what was that house?
+00:44:50 Speaker 2
+Of the dragon that I tried.
+00:44:53 Speaker 2
+Yeah. See, I want to search for this ID.
+00:44:58 Speaker 2
+I should be able to search for it here.
+00:45:02 Speaker 2
+And now this is attached to all of these things for some reason. But here's the entity for House of the Dragon. And look, here's the all the synonyms which are English. I can see that this is partner and device of this for all partners and all devices. I got it from the right speed.
+00:45:18 Speaker 2
+That's where the source is. This is where the first air.
+00:45:20 Speaker 2
+Date all this information on the.
+00:45:21 Speaker 2
+Metadata and we can.
+00:45:22 Speaker 2
+See like where it came from. If anybody modified it, whatever right?
+00:45:27 Speaker 2
+This should also be an entertainment because a lot of this data that's in our feed should be.
+00:45:32 Speaker 2
+In both places, but.
+00:45:34 Speaker 2
+Intent is patterns, so you can see these are all the different patterns. So the view is with the placeholder for whatever side modifier is will result in the browse and so you can start looking at different things like what are all the patterns that we have look for TV power command and you can start.
+00:45:55 Speaker 2
+And like, shut off my television. Can you shut the TV off, please? With all these synonyms should all resolve.
+00:46:01 Speaker 2
+Yes.
+00:46:02 Speaker 2
+Goodnight, all this stuff so quarter you. I is where we usually look at as a source on The Voice team and say like, hey does Courtney have?
+00:46:10 Speaker 2
+This in the.
+00:46:11 Speaker 2
+End.
+00:46:12 Speaker 2
+In the data data is not in the.
+00:46:15 Speaker 2
+UI, we shouldn't.
+00:46:16 Speaker 2
+Be because that's usually a big thing. Like if somebody we get a ticket from Prague and they say use the same house.
+00:46:23 Speaker 2
+Dragging it and we're getting searches and nothing's coming back. We can look at Courtney and say hey, Corey doesn't return house with Dragon. Something wrong with our data. We don't have it. We can't show it. It's just like.
+00:46:33 Speaker 2
+Helps debug all this other stuff.
+00:46:36 Speaker 2
+Ohh fast I can't remember if I used it.
+00:46:39 Speaker 2
+I don't think I use that, but.
+00:46:40 Speaker 2
+There's like DC.
+00:46:42 Speaker 2
+Which is the Control Center where you can do a routing and rule and stuff. There's a couple of UI's that we use for different teams and different reasons, but like Corey is going to be a.
+00:46:53 Speaker 2
+Really big one.
+00:46:56 Speaker 2
+That most people use and as you can see.
+00:47:00 Speaker 2
+There's. So I remember I mentioned all those different names sky.
+00:47:04 Speaker 2
+Sky has Italian, Germany and UK and for.
+00:47:08 Speaker 2
+Each one of.
+00:47:08 Speaker 2
+Those two different agents sky is and so obviously there's a lot of consolidation on either the Comcast, your home sports, CSTV Entertainment. Eventually the goal is like we don't need TV, we don't.
+00:47:20 Speaker 2
+Need.
+00:47:20 Speaker 2
+Sports, CX and home are header miss, but they're.
+00:47:23 Speaker 2
+All would just be under entertainment.
+00:47:26 Speaker 2
+And then here the difference now.
+00:47:31 Speaker 2
+I look for House of the.
+00:47:32 Speaker 2
+Dragon.
+00:47:34 Speaker 2
+It's just weird formatting thing they have because of metadata.
+00:47:38 Speaker 2
+Is.
+00:47:41 Speaker 2
+House of the Dragon.
+00:47:43 Speaker 2
+Is here still see saying things synonyms. All of that information, but now you can see there's more information we're ingesting. That wasn't an old one. We're adjusting content reading. We're adjusting the genre.
+00:47:51 Speaker 1
+Yeah.
+00:47:53 Speaker 2
+Tag the original language.
+00:47:55 Speaker 2
+Title Language description, language long synopsis all this.
+00:47:59 Speaker 2
+Stuff because we want to be able to.
+00:48:00 Speaker 2
+Do more like that. Data exists in the legacy.
+00:48:03 Speaker 2
+System we just weren't.
+00:48:05 Speaker 2
+Ingesting it and exposing it, but now we're neon because there's more.
+00:48:09 Speaker 2
+Product asks like how do we do this? Can we filter on whatever we're going to be ingesting more data to be able to utilize it so that the customers can save more complex query?
+00:48:15 Speaker 1
+Yeah.
+00:48:24 Speaker 2
+And then this is one of.
+00:48:25
+The like I said, this is.
+00:48:25 Speaker 2
+One of you guys VC.
+00:48:30 Speaker 2
+Is another one things the V right Control Center and what this does they have like rules like router rules, filter rules.
+00:48:38 Speaker 2
+And Websocket rules.
+00:48:40 Speaker 2
+You will see.
+00:48:42
+Oh.
+00:48:43 Speaker 2
+Yeah, but yeah, yeah.
+00:48:48 Speaker 1
+OK.
+00:48:49 Speaker 2
+So yeah.
+00:48:51 Speaker 2
+Hopefully that was helpful a little bit. Sure. Sure, if you have questions need anything always you just reach out.
+00:48:53 Speaker 1
+It really was, yeah.
+00:48:59 Speaker 1
+Yep.
+00:49:04 Speaker 1
+Right.
+00:49:08
+You got the wrong.
+00:49:09 Speaker 3
+Alright.
+00:49:12
+Yeah.
+00:49:31
+OK.
+00:49:58
+Yeah.
+
+
+
+

@@ -1,0 +1,1245 @@
+Audio file
+bin Kt.mp3
+Transcript
+00:00:20 Speaker 1
+So you're with the Gateway team, right?
+00:00:23 Speaker 1
+He said.
+00:00:23 Speaker 2
+Yes, so.
+00:00:31 Speaker 3
+Our team is actually called Big Team.
+00:00:34
+OK.
+00:00:35 Speaker 3
+So I don't know how much.
+00:00:41
+Yesterday.
+00:00:43 Speaker 1
+I mean, he went through the architecture. I mean, I wouldn't mind like you going through.
+00:00:46 Speaker 1
+The same thing and it's like.
+00:00:49 Speaker 3
+You get familiar with this.
+00:00:50 Speaker 1
+I he didn't show that tiger in.
+00:00:52 Speaker 1
+Particular but yeah, you.
+00:00:53
+Oh.
+00:00:53 Speaker 2
+Kind of draw it. OK, OK, you know, so.
+00:00:54
+Right.
+00:00:59 Speaker 3
+And that's that's.
+00:01:01 Speaker 3
+Our team, that's all.
+00:01:06
+What?
+00:01:20 Speaker 2
+So our team actually we called, yeah, so.
+00:01:28 Speaker 2
+This is framework.
+00:01:34 Speaker 3
+So for the framework like we have a lot of service not not not only like in our team. So we have a bunch of service which running the micro service which running in JVM Java or Scala. So for example our.
+00:01:49
+Is.
+00:01:49
+It.
+00:01:54 Speaker 3
+Back end.
+00:01:58 Speaker 3
+And.
+00:02:00 Speaker 3
+Agent dispatcher.
+00:02:07 Speaker 3
+And these two?
+00:02:12 Speaker 3
+This gateway.
+00:02:17 Speaker 3
+So this too is Gateway and.
+00:02:20 Speaker 3
+Now it's two separate microservice. We are trying to combine into one. That's our kind of work and we have the agent.
+00:02:31 Speaker 3
+So under agent.
+00:02:34 Speaker 3
+They do have a lot of like things.
+00:02:37 Speaker 3
+I think that.
+00:02:38 Speaker 3
+They should know better, but they have.
+00:02:39 Speaker 3
+Like TV agent.
+00:02:42 Speaker 3
+Home agent.
+00:02:44 Speaker 3
+Sports agent? Yeah.
+00:02:47 Speaker 3
+They're also making the change we want to have entertainment agent.
+00:02:55 Speaker 1
+Is that a new one or is that?
+00:02:56 Speaker 3
+Existing one. This is a new.
+00:02:58 Speaker 3
+1.
+00:03:00 Speaker 3
+So the gateway is also a new one.
+00:03:03 Speaker 3
+We also have like CX agent, so TV is just the TV domain always. We have some home device, yeah, light camera, like Wi-Fi router, sports is like we have some sports app.
+00:03:24 Speaker 3
+So that's a.
+00:03:25 Speaker 3
+Different thing so.
+00:03:28 Speaker 3
+CX is Xfinity assistant. OK, so that's all of our group, but we used to have those agent or these those domains. So domain agent, they're not exactly the same, but I can talk about that later, so.
+00:03:47 Speaker 1
+MHM.
+00:03:48 Speaker 3
+Uh, so for entertainment?
+00:03:52 Speaker 3
+Let me bring you the like I I can.
+00:03:57 Speaker 3
+Maybe later. So. So this they are all in JVM so they have a lot of things which can be shared like how they do the logging.
+00:04:10 Speaker 3
+How they do tracing?
+00:04:12 Speaker 3
+So I believe you know what is crazy, right? Yeah. Yeah. So. And I think this too is the most important and tracing.
+00:04:30 Speaker 3
+Well, interesting. OK. The like the metric.
+00:04:36 Speaker 3
+Like promises, metric and those are configuring the framework and they are.
+00:04:44 Speaker 3
+Using the framework.
+00:04:46 Speaker 1
+And so is the framework like a microservice.
+00:04:48 Speaker 3
+It's not a microservice.
+00:04:50 Speaker 3
+It is a Java repo so like.
+00:04:54 Speaker 3
+Like a library, so they all use this library that that is framework and since we are doing the.
+00:05:04 Speaker 3
+New service so this gateway.
+00:05:07 Speaker 3
+It's in Java 21 now with spring boot.
+00:05:11 Speaker 3
+So they are.
+00:05:12 Speaker 3
+All spring boot application so with spring boot.
+00:05:16 Speaker 3
+Free.
+00:05:18 Speaker 1
+And the reason why you're using Java 21.
+00:05:21 Speaker 1
+Like any new functionality or.
+00:05:23 Speaker 3
+Virtual stretch virtual thread? Yes, since we are doing so, all this old one, I think this is I believe in Java 11. This is also in Java 11. Yeah, they are using spring boot.
+00:05:32
+Yeah.
+00:05:36 Speaker 3
+Two.
+00:05:37 Speaker 3
+And since we are doing the new one, we.
+00:05:38 Speaker 3
+Are thinking this is.
+00:05:39 Speaker 3
+A good opportunity to do the.
+00:05:41 Speaker 3
+Upgrading. Yeah, 111 reason is so Spring boot 3.
+00:05:47 Speaker 3
+Oh sorry, Spring boot too. The likes support the US end of support for the Community version actually already passed, so they don't support spring boot to anymore. And for the enterprise I think it's next year some some sometime next year.
+00:06:07 Speaker 3
+So there's no support, so we want to upgrade to Spring boot, spring and spring boot. Three only support Java 7.
+00:06:14 Speaker 3
+Thing.
+00:06:15 Speaker 3
+And so if we are upgrading the Java, so let's upgrading to the like the latest version which is Java 21. That's why we do the upgrading. So a lot of framework code which here it is also Java 11 and spring good too.
+00:06:35 Speaker 3
+So they are not here.
+00:06:37 Speaker 3
+So a lot of food, more cold.
+00:06:39 Speaker 3
+In Gateway, so we are in. We're implementing this block tracing metric in Gateway.
+00:06:46 Speaker 3
+So you will see a lot of updates on The Voice gateway. So that's that's yeah, we're doing. I think we finished this I think last last week we just finished the last week this week, so.
+00:07:02 Speaker 3
+This is for framework and G is gateway so.
+00:07:07 Speaker 3
+Here and I. So that's a different thing. It is called ingestion.
+00:07:14 Speaker 3
+So I think, yeah. So Dante, I.
+00:07:18 Speaker 3
+Think must mention to you so.
+00:07:20 Speaker 3
+Yeah, this is a user. Yeah, and.
+00:07:24 Speaker 3
+At home it has some like saddle box, some device, saddle box and or like remote control.
+00:07:34 Speaker 3
+So this is the box.
+00:07:36 Speaker 3
+These two under in the box and so sending the so sky and the compass are different sky Comcast is the PTT.
+00:07:37
+Yeah.
+00:07:48 Speaker 2
+So.
+00:07:51 Speaker 3
+PD and Sky side is hands free.
+00:07:58 Speaker 3
+So PD is pushed to talk, so it is using the remote control. You need to push the button and say.
+00:08:05 Speaker 2
+Say the paper work.
+00:08:06
+Yeah.
+00:08:08 Speaker 1
+Yeah, one of those.
+00:08:09 Speaker 3
+Yeah. Yeah, so.
+00:08:10 Speaker 3
+It's like you need to push yourself.
+00:08:17 Speaker 3
+HBO.
+00:08:22 Speaker 3
+Yeah, this one's fine.
+00:08:25 Speaker 3
+But yeah, yeah, yeah. So on the Skype. It's hands free. So it's like.
+00:08:31 Speaker 3
+The Alexa Echo dot Amazon. So it's like they have a wake up word. So yeah, so.
+00:08:39 Speaker 3
+And.
+00:08:40 Speaker 1
+What is it we can worry about?
+00:08:41 Speaker 1
+OK.
+00:08:44 Speaker 3
+I think it's hello sky. Hello, sky. That's on the sky side. The sky is the like European.
+00:08:51 Speaker 3
+So so we have. So our all has both the North American and the European and some other partner. So I can talk about that later. But Sky is all in the hands free so.
+00:09:03 Speaker 3
+And.
+00:09:05 Speaker 3
+Hands Free is also now moved to next Gen.
+00:09:09 Speaker 3
+So.
+00:09:09 Speaker 3
+PGT is kind of like the code hands free is also a Lexi, Lexi name.
+00:09:18 Speaker 3
+Now we combine them in in in Gateway or into next Gen. API.
+00:09:24 Speaker 3
+So this is.
+00:09:25 Speaker 3
+Kind of to API.
+00:09:28 Speaker 1
+Where I get confused. Which one is it the hands?
+00:09:28
+Thank you.
+00:09:30 Speaker 1
+Sorry then.
+00:09:32 Speaker 1
+If it's not the remote.
+00:09:34 Speaker 3
+The skylines are hands free.
+00:09:37 Speaker 1
+Because the push to talk is also.
+00:09:39 Speaker 3
+Yeah, this is push to talk.
+00:09:40 Speaker 3
+You need to push.
+00:09:41 Speaker 1
+And that's not sky. The sky is a different.
+00:09:43 Speaker 3
+Yes, Sky is different. Sky is is.
+00:09:44 Speaker 3
+They have a voice.
+00:09:45 Speaker 1
+Ohh like a little.
+00:09:46 Speaker 1
+Device got it.
+00:09:46 Speaker 3
+Yeah. Yeah. A little device. Yeah. Sorry.
+00:09:49 Speaker 3
+Like listening the like.
+00:09:50
+Yeah.
+00:09:52 Speaker 3
+Trigger word.
+00:09:52 Speaker 1
+Yeah, yeah, yeah.
+00:09:53 Speaker 3
+So we moved to all.
+00:09:54 Speaker 3
+The next Gen. API and the next Gen. API can serve both PDN and hands free, so one difference is PDD is HTTP.
+00:09:56 Speaker 1
+Yeah.
+00:10:06 Speaker 3
+API.
+00:10:08 Speaker 3
+And the hands free is.
+00:10:11 Speaker 3
+Websocket API.
+00:10:16 Speaker 3
+So that's two different and the next Gen. is also one socket.
+00:10:21 Speaker 3
+And we were.
+00:10:22 Speaker 3
+Transform the.
+00:10:25 Speaker 3
+HTTP so it can also support HDP. We will transform the HTTP. So in the code like Websocket or HTTP it will go to the next floor. So we combine the flow here in the old code these two code has separate code base so it's really hard to maintain. So we combine them.
+00:10:42 Speaker 1
+Yeah.
+00:10:44 Speaker 3
+And.
+00:10:46 Speaker 3
+This is the two API so this will send to Gateway.
+00:10:55 Speaker 3
+Or back end so back end or paging dispatcher and here once we get the request we do several things here. So first one is ASR.
+00:11:10 Speaker 3
+Audio speech recognition so it will return transcription.
+00:11:14 Speaker 3
+Another one is ARS. So this is ASR. This is a ISIS is availability with the routing service. So inside here it is. So it's getting the ASI fetching data from some SSP service.
+00:11:35 Speaker 3
+And the data is sided, so it's a Jason blog. So inside there it is just several tags.
+00:11:43 Speaker 3
+So the tag is some like number like 123 under score 456. The number is much bigger so but yeah I think it's 19 digits something. Yeah. So within the AIS it will, it will have like several tons of these tags. Yeah. So the tags will determine your.
+00:12:03 Speaker 3
+Availability.
+00:12:05 Speaker 3
+Reliability means like different user, different customer, they can have different subscription.
+00:12:12 Speaker 3
+So for example, I pay for ESPN so I can watch the ESPN, so I will have more respect than you. So when we fetch the content, you know which content is available for this customer. So that is a IIS.
+00:12:29 Speaker 1
+So what is the air stands for?
+00:12:34 Speaker 3
+They'll related resolutions.
+00:12:41 Speaker 3
+Service I guess.
+00:12:45 Speaker 3
+So.
+00:12:47 Speaker 3
+From the AI service is handled by the REC team.
+00:12:52 Speaker 3
+So we call Rex.
+00:12:52 Speaker 3
+Team.
+00:12:54 Speaker 3
+So.
+00:12:57 Speaker 1
+What is rexing for?
+00:13:00 Speaker 3
+Like my first team for the search engine.
+00:13:04 Speaker 1
+Yeah. No, but what is initial the letters mean?
+00:13:07 Speaker 3
+Oh, I don't know.
+00:13:10 Speaker 3
+I don't know.
+00:13:12 Speaker 3
+I think it has some meaning.
+00:13:15 Speaker 3
+But I don't remember. Yeah, doesn't matter. But yeah. So so we are we are called.
+00:13:17 Speaker 1
+But.
+00:13:21 Speaker 3
+Some voice right, but starting voice voice is just erect.
+00:13:27 Speaker 3
+At the beginning, the team is called VEX, which is voice Rex OK.
+00:13:32 Speaker 3
+Yeah, but now we have switch from direct to voice, but if you see someone say V Rex, if if you look at our JIRA board it is all V Rex some number. Yeah. So that's the voice? Yeah and.
+00:13:49 Speaker 3
+Another thing it fetch here is the context.
+00:13:55
+So.
+00:13:56 Speaker 3
+Context. You can have it have like several APIs based on the device and.
+00:14:06 Speaker 3
+Like.
+00:14:06 Speaker 3
+Some new APIs so.
+00:14:08 Speaker 3
+Contacts come from.
+00:14:13 Speaker 3
+It does.
+00:14:16 Speaker 3
+Some service.
+00:14:18 Speaker 3
+It might also from Dynamodb.
+00:14:21 Speaker 3
+So Dynamo DB is like way.
+00:14:25 Speaker 3
+So we store the contacts in.
+00:14:28 Speaker 3
+That will be dev and fetch it later so.
+00:14:32 Speaker 3
+Through through landline.
+00:14:34 Speaker 3
+So connect means it's all the information of what your Current TV is. So for example your TV. Now it's on some.
+00:14:45 Speaker 3
+For example, kids. So. So if if someone say kids zone so the TV will switch to the kids mode so it will, we will know that from the context. So when we do the suggestion we will suggest the kids contacts to to you right.
+00:15:01 Speaker 1
+Yeah. So so you have different like repositories for kids?
+00:15:05 Speaker 1
+And one for adult content or something or for.
+00:15:08 Speaker 3
+So it's it's all from 1:00 we call the, so all the compact so all.
+00:15:12 Speaker 3
+Or the content or the program is coming from from Merlin, I will talk about that later. So the Merlin will have some pets.
+00:15:23 Speaker 2
+This.
+00:15:23 Speaker 3
+Is a kids. Yeah. This is adult. Yeah. It will have the tag.
+00:15:29 Speaker 3
+So so we.
+00:15:29 Speaker 3
+Do the filter there, yeah.
+00:15:32 Speaker 3
+Once we have these three information, we you are like keep the agent dispatcher. Yeah, same working in the gateway and the agent dispatcher will have something. After that it will do the domain selector.
+00:15:53 Speaker 3
+So basically, based on your transcription, based on your request, which domain you should hit.
+00:15:59 Speaker 3
+And then it was hit two things by his the LP LP.
+00:16:09 Speaker 3
+Why the agent?
+00:16:13 Speaker 2
+So.
+00:16:15 Speaker 3
+Agent is.
+00:16:17 Speaker 3
+Yeah, there's an agent and.
+00:16:18
+Yes you can.
+00:16:23 Speaker 3
+LP is like your you need to understand your request because it is not a search.
+00:16:31 Speaker 3
+Some people, they they would say I want to watch HBO.
+00:16:36 Speaker 3
+Some people will say show me kids movie show me free movie show me comedy.
+00:16:42 Speaker 3
+Movies, something like that.
+00:16:43 Speaker 3
+So you need to understand the the the work, so that is what I've been doing. So you.
+00:16:49 Speaker 3
+Like we do have machine learning based model and also some rule based model. So for example I want to watch Game of Thrones, it knows game of Throne is like the entity so they they do have entity resolution. Here they know the game.
+00:17:07
+That's all.
+00:17:08 Speaker 3
+Is an entity in the program, so it will curate the racks with that game of Throne. So inside the ERP service it will have.
+00:17:20
+So.
+00:17:20 Speaker 2
+Let me remove this.
+00:17:30 Speaker 3
+So inside the app service.
+00:17:34 Speaker 3
+Before I have.
+00:17:37 Speaker 3
+The.
+00:17:40 Speaker 3
+So I'm not the.
+00:17:41 Speaker 3
+Expert in because.
+00:17:43 Speaker 3
+This is an each team, but they will have a data.
+00:17:49 Speaker 3
+English.
+00:17:53 Speaker 3
+So the data service will store all the entities, all the programs there. So we have different entities like program.
+00:18:06 Speaker 3
+Program is like movie.
+00:18:13 Speaker 3
+Theory master.
+00:18:16 Speaker 3
+Episode.
+00:18:21 Speaker 3
+Sports event.
+00:18:28 Speaker 3
+Other like some other I can remember, like music something or yeah.
+00:18:34 Speaker 3
+And then it will have station.
+00:18:38 Speaker 3
+So station is station and company. There are different entity type but they are linked.
+00:18:45
+Yes.
+00:18:50 Speaker 3
+So station like CNBC Gas station and it will also have person.
+00:19:00 Speaker 3
+Banned.
+00:19:02 Speaker 3
+So some people will say I want to watch a movie for Scott Jump in something like that so.
+00:19:09 Speaker 3
+We also do the match.
+00:19:12 Speaker 3
+Yeah, 12 other some other entity types and.
+00:19:19 Speaker 3
+The data service will have all these entities and so when they do that.
+00:19:26 Speaker 3
+Resolution and know that's the entity. Yeah, and.
+00:19:30 Speaker 3
+The data is being pushed here by ingest.
+00:19:35 Speaker 3
+So that's part of our teams job. So we get the data for the interest.
+00:19:46 Speaker 3
+There's. Let me see what I got.
+00:19:55 Speaker 3
+So the data source is called quiz node.
+00:20:03 Speaker 3
+So which node is a company we purchased? I don't know decades ago and.
+00:20:07
+Well.
+00:20:11 Speaker 3
+The grass node has all this information from the market and.
+00:20:19 Speaker 3
+Early.
+00:20:20 Speaker 3
+It's inside our company, so that's inside all.
+00:20:23 Speaker 3
+That's I think.
+00:20:25 Speaker 3
+Fitting or?
+00:20:26 Speaker 3
+So that you can think about learning will be our.
+00:20:29 Speaker 3
+Source of truth.
+00:20:30 Speaker 3
+So you get all the data from grace node and all those entity data from grace node and that data is huge.
+00:20:44 Speaker 3
+Rex, get the data from morning.
+00:20:47 Speaker 3
+So respect. So when the for example when we.
+00:20:54 Speaker 3
+The Game of Thrones, someone said. I want. I want to see game of Throne. Yeah, so it was we were used for the game of Throne is is the title. So it will check the so we will have game of Throne serial master in our data service.
+00:21:13 Speaker 3
+But we only do the we only do to the like.
+00:21:16 Speaker 3
+The serial master level.
+00:21:20 Speaker 3
+We don't have this availability. We fetch the availability, but this data service it doesn't know the availability because availability is on the showing level so.
+00:21:37 Speaker 3
+So we have for example, we have.
+00:21:38 Speaker 3
+A theory master.
+00:21:43 Speaker 3
+And.
+00:21:45 Speaker 3
+The serial master have.
+00:21:48 Speaker 3
+Episode.
+00:21:50 Speaker 3
+So then months then you can have.
+00:21:52 Speaker 3
+Like several seasons, several.
+00:21:53 Speaker 3
+Episodes and one episode we have.
+00:21:57 Speaker 3
+Two showing. So one is called linear.
+00:22:02 Speaker 3
+Why it's called? Actually we have 3.
+00:22:05 Speaker 3
+It's called ward. Ward. Ward means video on demand.
+00:22:10 Speaker 3
+And we have a live board.
+00:22:13 Speaker 3
+This is new one like two years ago. We bring this light body linear board.
+00:22:19
+So.
+00:22:20 Speaker 3
+These are the showing, so linear is kind of it is.
+00:22:25 Speaker 3
+On the channel on the CNN channel, what is currently playing, that's a link.
+00:22:30 Speaker 3
+Yeah.
+00:22:31 Speaker 3
+Yeah. So it's some, it's like the the live program, so.
+00:22:39 Speaker 3
+They move from one of the episode is where I have.
+00:22:43 Speaker 3
+A lot of showings here.
+00:22:45 Speaker 3
+So you can.
+00:22:46 Speaker 3
+Have two linear showings play on two different station.
+00:22:50 Speaker 3
+Or same station to different.
+00:22:52 Speaker 3
+Right. So that's showing information and to determine the availability, it is on the showing level. So we don't have that in our inside voice we will call racks. So what we are doing here so inside the data service we do a title finding match some match we find.
+00:23:12 Speaker 3
+A merging ID, so every entity, every entity here.
+00:23:17 Speaker 3
+It will have.
+00:23:17 Speaker 3
+A meeting ID. So that's a unique ID.
+00:23:20 Speaker 3
+So for example, we get 10 merging IDs from the game muscle. We will use this merging ID to correct.
+00:23:31 Speaker 3
+To get all the available programs. Some idea they might not be available.
+00:23:36 Speaker 3
+To this customer, so it will be removed.
+00:23:39 Speaker 3
+So so.
+00:23:42 Speaker 3
+So here in the racks racks will have all this data. So all this data will will come from racks and racks will also have.
+00:23:49 Speaker 3
+This showing data.
+00:23:51 Speaker 3
+But we only ingest, so Rex put this data in Mongo.
+00:23:57 Speaker 3
+MongoDB.
+00:23:59 Speaker 3
+But their runtime, so their API, their service runtime service is in solar.
+00:24:08 Speaker 3
+So we hit solar in the ALP in the agent, so the.
+00:24:15 Speaker 3
+Sorry the search engine. So query engine. Yeah. So, yeah. So agent to get the ID based on the match returned and agent will use all these ID to hit solo.
+00:24:18 Speaker 2
+OK.
+00:24:28 Speaker 3
+Which is the Rex team, and for the interest part, since Rex pushed all the data from Merlin to MongoDB.
+00:24:39 Speaker 3
+So for example, here we.
+00:24:40 Speaker 3
+Have I don't know the the count.
+00:24:43 Speaker 3
+Let's just say we have like 10.
+00:24:47 Speaker 3
+Media data.
+00:24:49 Speaker 3
+And to the racks because racks will do the availability, so it will only store the.
+00:24:56 Speaker 1
+Like so.
+00:24:58 Speaker 3
+Available program. So for example some program they are not available anymore to any customer, so it was still inverted but not in racks and racks. Since we have the showing right, it's showing. So wrecks is during the 14 days window.
+00:25:14 Speaker 3
+So it will only consider 14 days program so available program so.
+00:25:22 Speaker 3
+Which will reduce this number, for example.
+00:25:25 Speaker 3
+To 2 million.
+00:25:27 Speaker 3
+So we only have two-minute program to ingest.
+00:25:30 Speaker 3
+So this number is just. Yeah, I will make up this number.
+00:25:34 Speaker 3
+But from the MongoDB.
+00:25:37 Speaker 3
+Our ingest will push it to the.
+00:25:41 Speaker 3
+Elasticsearch.
+00:25:48 Speaker 3
+And the elastic search will be.
+00:25:55 Speaker 3
+Another service which I will put here so.
+00:26:01 Speaker 3
+We have 4 tui.
+00:26:08 Speaker 3
+So the code UI will get data from Elasticsearch.
+00:26:14 Speaker 3
+And.
+00:26:23 Speaker 3
+So.
+00:26:26 Speaker 3
+For MongoDB.
+00:26:28 Speaker 3
+With the youngest.
+00:26:32 Speaker 3
+It will go to.
+00:26:32 Speaker 2
+Elasticsearch.
+00:26:33 Speaker 1
+OK.
+00:26:34 Speaker 3
+And.
+00:26:36 Speaker 3
+Code you agreed for elastic search and also write to elastic search.
+00:26:41 Speaker 3
+Accordingly, I can show you show you later if we have time. So some we have some editorial team.
+00:26:51 Speaker 3
+So they can go to call UI for some program because all the we do the match by not only the program title also by the sync.
+00:27:03 Speaker 3
+So.
+00:27:04 Speaker 3
+So for some program they have some synonym, so the editor team, they will manually go to the code. You have to add those information or some metadata. So the coding that data is it is more than here. So and also we have some entities which is.
+00:27:13
+OK.
+00:27:14 Speaker 1
+Yeah.
+00:27:24 Speaker 3
+Not formally for manual entities so.
+00:27:30 Speaker 3
+In the elastic search as well, which pushed from the coding run, so once the model entity 1 is the number entity, the manual entity and this elastic search, all the data will push into this data service, so that's interest.
+00:27:49 Speaker 3
+So by any questions.
+00:27:54 Speaker 1
+I mean, I still need, we probably need to to look over some of the.
+00:27:56 Speaker 1
+Documentation to get more clarification.
+00:27:57 Speaker 3
+Yeah. Yeah, yeah, yeah. For sure. Yeah, so.
+00:27:59 Speaker 1
+There's a lot of things going on there.
+00:28:00 Speaker 3
+Yeah. So, but this is our team. So we have, yeah, framework, ingest and gateway. So Gateway is a microservice, ingest is like a.
+00:28:15 Speaker 3
+Kind of data in just we have a pipeline which in Jenkins so we.
+00:28:22 Speaker 3
+We schedule so there's two kind of ingest one is a four feet.
+00:28:35 Speaker 3
+And one is called incremental.
+00:28:41 Speaker 1
+In German.
+00:28:46 Speaker 3
+So this is scheduled every day at 7:00 AM, I think.
+00:28:52 Speaker 3
+This is every time there are some updates from MongoDB.
+00:28:58 Speaker 3
+We do the incremental feed also push to elastic search so the updates can be there's some new metadata added to one program so we don't need to run the four feet. We just know that one.
+00:29:13 Speaker 3
+And then the information push through live data search or some entity they are being removed because they are not available anymore. So it can also come from the incremental so it will remove from the elastic search. So that's the incremental feed and this is always running there. It's checking the.
+00:29:33 Speaker 3
+So, so so the the industry is reading from MongoDB.
+00:29:35 Speaker 2
+We.
+00:29:41 Speaker 3
+Right into S3.
+00:29:44 Speaker 3
+And we push from spray.
+00:29:46 Speaker 3
+To elastic search.
+00:29:47
+Yeah, this is a.
+00:29:48 Speaker 3
+Middle step. Yeah, so we we use that spray so.
+00:29:52 Speaker 1
+Oh, OK.
+00:29:53 Speaker 3
+So all these pipelines is reading from MongoDB, push JS3 and 5/3.
+00:29:59 Speaker 3
+Push to elastic search.
+00:30:01 Speaker 1
+Yeah. Is that the only service you're using?
+00:30:07 Speaker 1
+Are you using anything else like EC2 or CC?
+00:30:11 Speaker 2
+So.
+00:30:14 Speaker 3
+For the for the sky, everything is interesting, yes, but on the North American part, we used to have a hybrid mode, which is we have our own data center like five or six data centers. The close one is the. Yeah, the.
+00:30:33 Speaker 3
+One, we have the Chicago one, we have the Oregon one.
+00:30:39 Speaker 3
+I don't know but.
+00:30:40 Speaker 1
+Yeah. So you say you you still have.
+00:30:41 Speaker 3
+It you don't have it anymore. No. We still for the data center, we still have it. But like hybrid. Yeah. For the hybrid like in the prime time which is.
+00:30:51 Speaker 3
+I think some time around like 7:00 PM which people starting to watch TV. So we will spin up the AWC 2.
+00:31:03 Speaker 3
+To support that traffic. But now since, like everything become, I don't know. I think that's like the finance, finance issue or something like we are moving out from AWS.
+00:31:04 Speaker 1
+OK.
+00:31:18 Speaker 1
+Out from the.
+00:31:19 Speaker 1
+Only on premise. Yeah. So we don't use.
+00:31:23 Speaker 3
+We don't use EC2 for the North America because because yeah, that yeah, I think.
+00:31:26 Speaker 2
+Interesting.
+00:31:28 Speaker 1
+Budget.
+00:31:29 Speaker 3
+The budget thing, but yeah, we are.
+00:31:30 Speaker 3
+Moving out and so now it's everything is in Doctor.
+00:31:36 Speaker 1
+OK.
+00:31:37 Speaker 3
+And I think this year we are trying to move.
+00:31:40 Speaker 3
+To to Venice.
+00:31:43 Speaker 3
+So all the so all the microservice here you are seeing. So agent agent, dispatcher, NLP all the agents, the gateway, the back end they are all micro service running in the doctors one we are.
+00:31:53 Speaker 1
+Yeah.
+00:31:56 Speaker 3
+Moving to this, yeah.
+00:31:58 Speaker 3
+Yeah. Yeah. OK. So.
+00:32:00 Speaker 3
+So it's the so not in North America, everything in data center and in.
+00:32:06 Speaker 3
+Europe, we are still using.
+00:32:08 Speaker 3
+The like data because we don't have data center in Europe for the sky I mean.
+00:32:11 Speaker 3
+For the sky and.
+00:32:13 Speaker 3
+Let me talk about the like the the the calling UI so.
+00:32:16 Speaker 1
+Core UI.
+00:32:20 Speaker 3
+So it's not only for the quality UI, but yeah, if you go into the quality UI you will have. You will see a lot of.
+00:32:33 Speaker 3
+I don't know you can you can say domains.
+00:32:38 Speaker 3
+So or you can say I don't know, you know something so but there is several domains. So we have the.
+00:32:47 Speaker 3
+TV domain.
+00:32:49 Speaker 3
+We have sports domain.
+00:32:52 Speaker 3
+We have.
+00:32:56 Speaker 3
+Scott.
+00:32:58 Speaker 3
+Yeah. So.
+00:33:02 Speaker 3
+Focus.
+00:33:05 Speaker 3
+Focus Skyrim IP.
+00:33:09 Speaker 3
+That's skyline. So this two is Europe.
+00:33:15 Speaker 3
+Sky the old one. I guess we were all moved to Skyline. So, sky Lexi. Where you?
+00:33:21 Speaker 3
+Can see so.
+00:33:25 Speaker 3
+Sky and so they all have.
+00:33:26 Speaker 3
+3 domains under it, OK.
+00:33:30 Speaker 3
+It Italian and.
+00:33:34 Speaker 3
+GE Germany. Yeah, so yeah, 3.
+00:33:38 Speaker 3
+So you can say it's a region or I don't know about. Yeah, we call it domain. So for the TV.
+00:33:44 Speaker 3
+It's North America.
+00:33:48 Speaker 2
+So the.
+00:33:50 Speaker 3
+North American is us.
+00:33:56 Speaker 3
+Canada.
+00:33:58 Speaker 3
+Yeah.
+00:33:59 Speaker 3
+And.
+00:34:01 Speaker 3
+You have different.
+00:34:02 Speaker 3
+Partners.
+00:34:04 Speaker 3
+So for example us we can we have compost we have.
+00:34:09 Speaker 3
+Cops.
+00:34:11 Speaker 3
+We have zumo and for the VA we have Rogers. We have jeans, so that's all the partners and.
+00:34:21 Speaker 3
+These these domains.
+00:34:23 Speaker 3
+Now we are building a new things which called Neon.
+00:34:29 Speaker 3
+I don't know what this each letter stands for, but.
+00:34:33 Speaker 3
+You can also.
+00:34:36 Speaker 3
+Think about it is entertainment.
+00:34:41 Speaker 3
+Domain.
+00:34:44 Speaker 3
+Now the data is same as the TV domain.
+00:34:49 Speaker 3
+In the entertainment is same as TV classic sports domain, so the data here.
+00:34:55 Speaker 3
+But later we were starting to push data from Soil UK first also into entertainment. So all the data. So you can say well this will be so we will only have one domain which contain all the data for different distributions.
+00:35:12 Speaker 3
+Forget some region. We also have foxtail.
+00:35:19
+Foot stairs at.
+00:35:20 Speaker 3
+APAC.
+00:35:23 Speaker 3
+Australia.
+00:35:25 Speaker 3
+So that's also we are onboarding them and in the future I think South Africa.
+00:35:33 Speaker 3
+Region will also bring you to the fox there.
+00:35:36 Speaker 3
+Uh.
+00:35:39 Speaker 3
+We are kind of doing this.
+00:35:40 Speaker 3
+Partner way, so bring more.
+00:35:43 Speaker 3
+Partner.
+00:35:45
+Hmm.
+00:35:45 Speaker 3
+Into into our system. So that's then, yeah, is what we are building. So if you have that work neon, you know it's one thing, but domain, it's what for the like combining all these things into one. So that's our main focus.
+00:36:03 Speaker 3
+And.
+00:36:05 Speaker 2
+Uh.
+00:36:08 Speaker 3
+I think that's pretty much it for the whole picture. Yeah. Once you get the computer. Yeah, there's a lot of wiki page you can look through a lot of like documentation like the architecture page which. Yeah, can.
+00:36:26 Speaker 2
+Make you more.
+00:36:29 Speaker 1
+Beyond this, yeah, there's a lot of stuff going on with the little over one thing.
+00:36:31 Speaker 3
+Yeah.
+00:36:38 Speaker 1
+But I get the idea of the moving parts. Yeah. So. So how many databases or like do you have? I mean you, I mean because you mentioned the MongoDB, but you didn't mention anything else like is that?
+00:36:52 Speaker 1
+What you have all?
+00:36:53 Speaker 3
+Your so.
+00:36:55 Speaker 3
+Mongo DB is on the racks.
+00:36:58 Speaker 1
+Right, But that's not the only thing it has.
+00:37:01 Speaker 3
+Yeah. So now we are using all the data we are pushing to elastic search, right? So.
+00:37:13 Speaker 3
+That's another database, but we are also making change of this.
+00:37:17 Speaker 3
+We were replace the elastic search with.
+00:37:24 Speaker 3
+IDs.
+00:37:28 Speaker 3
+The post crash so.
+00:37:31 Speaker 1
+Interesting.
+00:37:31 Speaker 3
+Yeah, so this work will also be in our team. So Kenny and Ross, we who is doing this work, so database is one type of the change of the work. They are making a new service called Control.
+00:37:49 Speaker 3
+Like the name keeps changing. I don't know the data plane.
+00:37:56 Speaker 3
+Or sometime you are you are hurt control plane.
+00:38:00 Speaker 3
+It's the same thing.
+00:38:02 Speaker 3
+So that's a new service.
+00:38:04 Speaker 1
+Control plane.
+00:38:05 Speaker 3
+Yeah. Or data plane. That's a. That's a like a.
+00:38:08 Speaker 3
+New service which?
+00:38:10 Speaker 3
+Beautiful entertainment for neon, so they will push the data.
+00:38:18 Speaker 3
+To elaborate ideas. So the MongoDB we have, we have a pipeline which like to.
+00:38:25 Speaker 2
+To to S3.
+00:38:28 Speaker 3
+Financially push to elastic search and with the control plane it will push fire 3.
+00:38:33 Speaker 3
+To RDS to the Postgres.
+00:38:36 Speaker 3
+So that's the control plane and we have a lot.
+00:38:40 Speaker 3
+Of things so.
+00:38:43 Speaker 3
+We have another mechanism called pulling which is a very.
+00:38:49 Speaker 3
+Bad design. So we are the control plane is replacing that pulling. So what is the pulling mechanism? So all the data, so the Elasticsearch we have?
+00:38:59 Speaker 3
+Right here, right.
+00:39:08 Speaker 3
+Some code you are right to elastic search with this change coding UI.
+00:39:14 Speaker 3
+Now calling you directly talk to Elastic search. With this change call the UI.
+00:39:20 Speaker 3
+Or talks to.
+00:39:22 Speaker 3
+Data upgrade service.
+00:39:24 Speaker 3
+And the the data I write to RDS.
+00:39:29 Speaker 3
+Yeah. So.
+00:39:31 Speaker 3
+But The thing is, so they're not going to provide a lot of API's. So you don't need to worry about how you handle with the with the.
+00:39:40 Speaker 3
+Like the database you just call the API, so in the later if we want to switch the database, all the work will be in the control plane.
+00:39:50 Speaker 3
+You are.
+00:39:51 Speaker 3
+Keep the same.
+00:39:52
+Yeah.
+00:39:52 Speaker 3
+Yeah, so this polling mechanism is all the data now in the elastic search. And as I mentioned, we have the NLP.
+00:40:06 Speaker 3
+Data service image we have for example agent dispatcher.
+00:40:17 Speaker 3
+So so the coding UI.
+00:40:19 Speaker 3
+Has the entity data right?
+00:40:22 Speaker 3
+And entity data is.
+00:40:27 Speaker 2
+Come from murdering.
+00:40:30 Speaker 3
+Or some manual data.
+00:40:32 Speaker 3
+Like normally.
+00:40:37 Speaker 3
+You know, I'll have some other information.
+00:40:41 Speaker 3
+For example in 10.
+00:40:49 Speaker 3
+And some other configuration you can think about it. That's a configuration so intent is just the.
+00:40:56 Speaker 3
+Kind of the same rule based pattern. This configuration which will be used by agent dispatcher being used by domain selector being used by.
+00:41:10 Speaker 3
+NLP and the data service is the entity data, so this all different data need to.
+00:41:17 Speaker 3
+Go to this.
+00:41:18 Speaker 3
+Containers. So in the production this is all the container in Docker swarm.
+00:41:26 Speaker 3
+And how we do?
+00:41:27 Speaker 3
+The update from here called from the elastic search.
+00:41:32 Speaker 3
+To these containers we do from.
+00:41:35 Speaker 3
+Polling. So what polling does?
+00:41:38 Speaker 3
+Is.
+00:41:40 Speaker 3
+This container will provide a porting API. It is called porting but, but it's actually a pushing mechanism.
+00:41:50 Speaker 3
+I don't know who designed this, but yeah, this is really bad design and it's causing a lot of issues, so we want to get rid of this so this pulling API.
+00:42:02 Speaker 3
+You don't get data from here called the Polling API with the updates with the data to load the data into these containers. That's what pointed us and think about like you have.
+00:42:15 Speaker 3
+Six container in one docker swang and we have two Docker swang in one data center. So six data Center for that kind of. I don't know 60 like container.
+00:42:29 Speaker 3
+Sorry, six connected.
+00:42:31 Speaker 3
+For each service and we have if we have 5 service micro service it's like I don't know 300 calls. You need to make so yeah.
+00:42:42 Speaker 3
+So with the data plane it was doing a different way I think. Since we are moving it into that is I don't know how how bad is running right now. I think yeah, they will use some to do this.
+00:42:58 Speaker 3
+Updates so.
+00:43:00 Speaker 3
+Uh.
+00:43:03 Speaker 3
+That's another change with the data plane.
+00:43:06 Speaker 1
+Yeah. So how old is this sign?
+00:43:09 Speaker 3
+How old is?
+00:43:09 Speaker 1
+This one? Yeah. Like how many years?
+00:43:12 Speaker 3
+I don't know. Before I joined the this team is there. So whatever five years I guess.
+00:43:18 Speaker 1
+More than five years, yeah.
+00:43:21 Speaker 2
+So.
+00:43:24 Speaker 3
+I think the first time I joined the.
+00:43:28 Speaker 3
+Data team. The best team. Yeah, I think I've joined.
+00:43:32 Speaker 3
+Three years ago, yeah. The first year is making everything working because of this mechanism. Because of the like the India just we are doing.
+00:43:43 Speaker 3
+The data just get like messed up, so a lot of issues there so.
+00:43:50 Speaker 3
+That's our pinpoint. So we are trying to get rid of that, yeah.
+00:43:56
+Interesting.
+00:43:59 Speaker 1
+Alright so.
+00:44:01 Speaker 2
+Yeah.
+00:44:03 Speaker 1
+Yeah. I mean, if you can just, I mean once I get my computer, I'm guessing I'll get an.
+00:44:07 Speaker 1
+E-mail as well, OK.
+00:44:08 Speaker 3
+Yeah, you'll get an e-mail and I'll.
+00:44:10 Speaker 1
+If you can just send me over the.
+00:44:11 Speaker 3
+Yeah, I will send you few things and also I will ask.
+00:44:18 Speaker 3
+To send you several things.
+00:44:19 Speaker 3
+I think because ** *** just get.
+00:44:22 Speaker 3
+Through all this, yeah.
+00:44:22 Speaker 1
+Ohh she she was the one.
+00:44:24 Speaker 1
+Who was like her?
+00:44:24 Speaker 3
+Yeah. Yeah. She just joined. So yeah, she she should have a lot of like.
+00:44:28 Speaker 3
+Page, I will ask her to to.
+00:44:31 Speaker 3
+Give you all the like documents which Vijay sent to her. OK, so just pass over to you. And I think another thing is I will get you slack access once you get the computer you need to wait. So yeah, usually we use a slack to.
+00:44:48 Speaker 3
+Chat.
+00:44:49 Speaker 3
+So yeah, so that's another thing and I would bring to your, there's a lot of channels. So yeah, so in the in our private dev channel, there's also a few links in the channel you can you can follow, yeah, so.
+00:45:00 Speaker 1
+Yeah.
+00:45:03 Speaker 3
+Code wise I think, yeah.
+00:45:05 Speaker 3
+Once you get the computer, you can.
+00:45:07 Speaker 3
+Download the code to check out.
+00:45:09 Speaker 3
+The code, yeah, yeah.
+00:45:10 Speaker 3
+I think first thing is to just follow the reasoning to.
+00:45:14 Speaker 3
+Get the code.
+00:45:16 Speaker 1
+What are you using to store the code repository?
+00:45:21 Speaker 1
+That you have, like you said, like guitar for Bitbucket or GitHub, OK.
+00:45:24 Speaker 3
+OK, good. Yeah. Yeah, yeah, yeah, I think, yeah. ***** is using. Yeah, I know that. Yeah. So we get up and.
+00:45:29 Speaker 1
+Bit Bitbucket.
+00:45:38 Speaker 2
+I think we.
+00:45:39 Speaker 3
+Before we are using the enterprise get get up and now we switch to the get up cloud. So yeah, I think that that just happened this year. So but yeah, it's it's all on GitHub and we me it should be.
+00:45:44 Speaker 1
+OK.
+00:45:50 Speaker 1
+Nice.
+00:45:54 Speaker 3
+Enough.
+00:45:55 Speaker 3
+To if you follow the read me, you should be able to start the application. Yeah. If not just let me know. You will have. You will need to have several permission.
+00:46:00 Speaker 1
+OK.
+00:46:11 Speaker 3
+Request.
+00:46:12 Speaker 1
+Yeah, I need to raise several axes this week. I guess right? Like for servers.
+00:46:14 Speaker 3
+Yeah. Yeah, yeah, yeah, yeah.
+00:46:16
+Yeah, there is a.
+00:46:17 Speaker 3
+Lot of things you need to do, but yeah.
+00:46:18 Speaker 1
+Alright.
+00:46:25
+Try.
+00:46:25 Speaker 3
+Then just said you.
+00:46:34 Speaker 1
+Or did you got here?
+00:46:36 Speaker 3
+She said it it was.
+00:46:38 Speaker 3
+To deliver, but he asked.
+00:46:42 Speaker 3
+Delivery should go.
+00:46:43
+To.
+00:47:21 Speaker 1
+Hey.
+00:47:25
+Yeah.
+00:47:28 Speaker 4
+We got to move to another.
+00:47:29 Speaker 4
+Office and then they.
+00:47:33 Speaker 4
+Said it was signed by Scott.
+00:47:38 Speaker 4
+And then, like 25 minutes later.
+00:47:40 Speaker 4
+It came up.
+00:47:41 Speaker 4
+And you can see it's been open.
+00:47:44 Speaker 4
+So I I built in there, I built the computer, I built the card.
+00:47:47 Speaker 1
+Everything.
+00:47:48 Speaker 4
+Yeah, just open it up.
+00:47:49 Speaker 4
+And we'll confirm everything back just this is.
+00:47:51 Speaker 4
+Right, 33.
+00:47:53
+Final.
+00:47:57 Speaker 4
+The computer that never wanted to get there.
+00:48:02
+Yeah.
+00:48:10 Speaker 2
+Somewhere in there.
+00:48:14 Speaker 2
+Of course.
+00:48:27
+Yeah.
+00:48:28 Speaker 1
+This.
+00:48:47 Speaker 1
+Am I supposed to be anything else like that?
+00:48:51 Speaker 4
+So.
+00:49:03 Speaker 1
+Instructions.
+00:49:07 Speaker 4
+All right. So so I'll seek you to on Thursday, because right now I have to move somebody before you can.
+00:49:14 Speaker 4
+Get in the.
+00:49:15
+Seat.
+00:49:16 Speaker 4
+And please to move at the end of the day.
+00:49:18 Speaker 1
+OK.
+00:49:19 Speaker 4
+So, so just hang out with the in that area for the next couple of days.
+00:49:27 Speaker 4
+Yeah. And then he's going to, you know what?
+00:49:29 Speaker 4
+Robbie is sitting.
+00:49:29 Speaker 4
+Right.
+00:49:30 Speaker 4
+I know.
+00:49:31 Speaker 4
+Robbie's gonna be moving to a different location, so he'll have Robbie.
+00:49:35 Speaker 3
+Robbie's moving.
+00:49:37 Speaker 2
+OK.
+00:49:38 Speaker 4
+He's just moving to where Keisha.
+00:49:40 Speaker 4
+Used to say.
+00:49:41 Speaker 3
+Ohh, same office. OK OK.
+00:49:42 Speaker 4
+Yeah. No, no, no. That's a different seed. Yeah. So, yeah, the the the director in above session.
+00:49:47 Speaker 3
+OK, I know that. OK. OK, cool. So.
+00:49:53 Speaker 1
+Do I need like any good credentials to log in?
+00:49:55 Speaker 3
+I I have your question.
+00:49:57
+Thank you so much.
+00:49:58 Speaker 4
+Yeah.
+00:50:11
+OK.
+
+
+
+
